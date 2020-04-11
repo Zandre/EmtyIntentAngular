@@ -1,25 +1,42 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "71e589f68ef40e3a3978da4bda4683a364149eb9"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "TestProject.NewApplication5.Application/1.0.0": {
         "dependencies": {
-          "Intent.RoslynWeaver.Attributes": "1.0.0.0"
+          "TestProject.NewApplication5.Domain": "1.0.0"
         },
         "runtime": {
           "TestProject.NewApplication5.Application.dll": {}
         }
       },
-      "Intent.RoslynWeaver.Attributes/1.0.0.0": {
+      "Intent.RoslynWeaver.Attributes/1.0.0": {
         "runtime": {
-          "Intent.RoslynWeaver.Attributes.dll": {
+          "lib/netstandard2.0/Intent.RoslynWeaver.Attributes.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
+        }
+      },
+      "RT.Comb/2.3.0": {
+        "runtime": {
+          "lib/netstandard1.2/RT.Comb.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "TestProject.NewApplication5.Domain/1.0.0": {
+        "dependencies": {
+          "Intent.RoslynWeaver.Attributes": "1.0.0",
+          "RT.Comb": "2.3.0"
+        },
+        "runtime": {
+          "TestProject.NewApplication5.Domain.dll": {}
         }
       }
     }
@@ -30,8 +47,22 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Intent.RoslynWeaver.Attributes/1.0.0.0": {
-      "type": "reference",
+    "Intent.RoslynWeaver.Attributes/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/ddEKCZ8Ra+MaFwUxTX2jZrNXOMyoN2MHGSn7LIAMalrXKPUIe1mYwQyjOu/Vwl7w10RUU6kj7TqKCGAqCqG8A==",
+      "path": "intent.roslynweaver.attributes/1.0.0",
+      "hashPath": "intent.roslynweaver.attributes.1.0.0.nupkg.sha512"
+    },
+    "RT.Comb/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QlVYGpMKMGynOBJHCNptUtj5OZILvnglWnwOuB2EBavasJgHf4BSLnOKb7H23Q3u97OqOk9M7yCwAqGg+uMMrA==",
+      "path": "rt.comb/2.3.0",
+      "hashPath": "rt.comb.2.3.0.nupkg.sha512"
+    },
+    "TestProject.NewApplication5.Domain/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Intent.RoslynWeaver.Attributes/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Intent.RoslynWeaver.Attributes.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Intent.RoslynWeaver.Attributes.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.1.0": {
         "type": "package",
         "dependencies": {
@@ -207,10 +216,49 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "RT.Comb/2.3.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.2/RT.Comb.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/RT.Comb.dll": {}
+        }
+      },
+      "TestProject.NewApplication5.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Intent.RoslynWeaver.Attributes": "1.0.0",
+          "RT.Comb": "2.3.0"
+        },
+        "compile": {
+          "bin/placeholder/TestProject.NewApplication5.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TestProject.NewApplication5.Domain.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Intent.RoslynWeaver.Attributes/1.0.0": {
+      "sha512": "/ddEKCZ8Ra+MaFwUxTX2jZrNXOMyoN2MHGSn7LIAMalrXKPUIe1mYwQyjOu/Vwl7w10RUU6kj7TqKCGAqCqG8A==",
+      "type": "package",
+      "path": "intent.roslynweaver.attributes/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "intent.roslynweaver.attributes.1.0.0.nupkg.sha512",
+        "intent.roslynweaver.attributes.nuspec",
+        "lib/net45/Intent.RoslynWeaver.Attributes.dll",
+        "lib/netstandard2.0/Intent.RoslynWeaver.Attributes.dll"
+      ]
+    },
     "Microsoft.NETCore.App/2.1.0": {
       "sha512": "JNHhG+j5eIhG26+H721IDmwswGUznTwwSuJMFe/08h0X2YarHvA15sVAvUkA/2Sp3W0ENNm48t+J7KTPRqEpfA==",
       "type": "package",
@@ -680,11 +728,29 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "RT.Comb/2.3.0": {
+      "sha512": "QlVYGpMKMGynOBJHCNptUtj5OZILvnglWnwOuB2EBavasJgHf4BSLnOKb7H23Q3u97OqOk9M7yCwAqGg+uMMrA==",
+      "type": "package",
+      "path": "rt.comb/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.2/RT.Comb.dll",
+        "rt.comb.2.3.0.nupkg.sha512",
+        "rt.comb.nuspec"
+      ]
+    },
+    "TestProject.NewApplication5.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TestProject.NewApplication5.Domain/TestProject.NewApplication5.Domain.csproj",
+      "msbuildProject": "../TestProject.NewApplication5.Domain/TestProject.NewApplication5.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "TestProject.NewApplication5.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -716,7 +782,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\zandreb\\Desktop\\Test5\\TestProject.NewApplication5.Domain\\TestProject.NewApplication5.Domain.csproj": {
+              "projectPath": "C:\\Users\\zandreb\\Desktop\\Test5\\TestProject.NewApplication5.Domain\\TestProject.NewApplication5.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

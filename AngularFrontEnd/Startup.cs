@@ -19,6 +19,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Intent.RoslynWeaver.Attributes;
 using TestProject.NewApplication5.Domain;
+using SithLordsRepository = TestProject.NewApplication5.Infrastructure.Data.SithLordsRepository;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Startup", Version = "1.0")]
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -40,6 +41,11 @@ namespace AngularFrontEnd
         {
             services.AddMvc();
             IntentConfiguredServices(services);
+
+            // ZB
+            // This could automatically be done if I can get Intent to generate Unity correctly. 
+            // For now manuall registration will do
+            services.AddTransient<ISithLordsRepository, SithLordsRepository>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

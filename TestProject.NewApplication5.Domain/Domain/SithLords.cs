@@ -11,6 +11,13 @@ namespace TestProject.NewApplication5.Domain
     [DefaultIntentManaged(Mode.Merge, Signature = Mode.Merge, Body = Mode.Merge, Targets = Targets.Methods, AccessModifiers = AccessModifiers.Public)]
     public partial class SithLords
     {
-
+        public static SithLords Create(string apprentice, string master)
+        {
+            return new SithLords
+            {
+                Apprentice = apprentice,
+                Master = master
+            };
+        }
     }
 }
