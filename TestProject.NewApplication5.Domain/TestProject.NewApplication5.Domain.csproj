@@ -9,4 +9,18 @@
     <PackageReference Include="RT.Comb" Version="2.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Domain\SithLordsState.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SithLords.cs</DependentUpon>
+    </Compile>
+  
+    <Compile Update="Domain\ISithLords.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SithLords.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>

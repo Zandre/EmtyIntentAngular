@@ -27,6 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\TestProject.NewApplication5.Infrastructure.Data\TestProject.NewApplication5.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\TestProject.NewApplication5.Application\TestProject.NewApplication5.Application.csproj" />
+    <ProjectReference Include="..\TestProject.NewApplication5.Domain\TestProject.NewApplication5.Domain.csproj" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

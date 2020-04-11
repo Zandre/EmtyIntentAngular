@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Intent.RoslynWeaver.Attributes;
+using TestProject.NewApplication5.Domain;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Startup", Version = "1.0")]
 [assembly: DefaultIntentManaged(Mode.Fully)]

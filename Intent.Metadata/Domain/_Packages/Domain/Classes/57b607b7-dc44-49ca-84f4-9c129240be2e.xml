@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="57b607b7-dc44-49ca-84f4-9c129240be2e" type="Diagram">
+  <name>Default</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>d64598ef-11b7-4c12-a384-0ddf423c3fc4</parentFolderId>
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes />
+  <diagram>
+    <targetPackageId>d64598ef-11b7-4c12-a384-0ddf423c3fc4</targetPackageId>
+  </diagram>
+  <childElements />
+</class>
