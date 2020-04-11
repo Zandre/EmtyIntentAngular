@@ -6,11 +6,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TestProject.NewApplication5.Domain\TestProject.NewApplication5.Domain.csproj" />
+    <ProjectReference Include="..\TestProject.NewApplication5.Infrastructure.Data\TestProject.NewApplication5.Infrastructure.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Intent.RoslynWeaver.Attributes">
       <HintPath>..\..\Test\NewApplication\TestProject.NewApplication.Domain\bin\Debug\Intent.RoslynWeaver.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Identity.Core">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.identity.core\2.2.0\lib\netstandard2.0\Microsoft.Extensions.Identity.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
 

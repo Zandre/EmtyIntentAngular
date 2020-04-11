@@ -31,7 +31,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         {
             var sithLord = await _sithLordRepository.FindByIdAsync(new Guid("15E3EF57-6C6E-478E-908A-D7EEB1851D9D"));
 
-            _sithLordRepository.Add(SithLords.Create(apprentice: "Snoke", master: "Darth Sidious"));
+            //_sithLordRepository.Add(SithLords.Create(apprentice: "Snoke", master: "Darth Sidious"));
 
             return TestDTO.Create(apprentice: sithLord.Apprentice,
                 master: sithLord.Master);

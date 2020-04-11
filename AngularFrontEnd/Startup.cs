@@ -20,6 +20,8 @@ using System.Threading.Tasks;
 using Intent.RoslynWeaver.Attributes;
 using TestProject.NewApplication5.Domain;
 using SithLordsRepository = TestProject.NewApplication5.Infrastructure.Data.SithLordsRepository;
+using TestProject.NewApplication5.Infrastructure.Data.DbContext;
+using Microsoft.AspNetCore.Identity;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Startup", Version = "1.0")]
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -52,6 +54,19 @@ namespace AngularFrontEnd
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            // add identity
+            var builder = services.AddIdentityCore<AppUser>(o =>
+            {
+                // configure identity options
+                o.Password.RequireDigit = false;
+                o.Password.RequireLowercase = false;
+                o.Password.RequireUppercase = false;
+                o.Password.RequireNonAlphanumeric = false;
+                o.Password.RequiredLength = 6;
+            });
+            builder = new IdentityBuilder(builder.UserType, typeof(IdentityRole), builder.Services);
+            builder.AddEntityFrameworkStores<NewApplication5DbContext>().AddDefaultTokenProviders();
 
         }
 
@@ -98,6 +113,7 @@ namespace AngularFrontEnd
         {
             ConfigureDbContext(services);
             services.AddTransient<ITestService, TestService>();
+            services.AddTransient<IAccounts, Accounts>();
         }
 
         private void ConfigureDbContext(IServiceCollection services)
