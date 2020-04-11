@@ -9,7 +9,8 @@
       "TestProject.NewApplication5.Domain/1.0.0": {
         "dependencies": {
           "Intent.RoslynWeaver.Attributes": "1.0.0",
-          "RT.Comb": "2.3.0"
+          "RT.Comb": "2.3.0",
+          "Microsoft.Extensions.Identity.Stores": "2.2.0.0"
         },
         "runtime": {
           "TestProject.NewApplication5.Domain.dll": {}
@@ -28,6 +29,14 @@
           "lib/netstandard1.2/RT.Comb.dll": {
             "assemblyVersion": "2.3.0.0",
             "fileVersion": "2.3.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.Identity.Stores/2.2.0.0": {
+        "runtime": {
+          "Microsoft.Extensions.Identity.Stores.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18316"
           }
         }
       }
@@ -52,6 +61,11 @@
       "sha512": "sha512-QlVYGpMKMGynOBJHCNptUtj5OZILvnglWnwOuB2EBavasJgHf4BSLnOKb7H23Q3u97OqOk9M7yCwAqGg+uMMrA==",
       "path": "rt.comb/2.3.0",
       "hashPath": "rt.comb.2.3.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Identity.Stores/2.2.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

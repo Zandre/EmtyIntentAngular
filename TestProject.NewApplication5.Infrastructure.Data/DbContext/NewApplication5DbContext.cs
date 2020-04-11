@@ -1,14 +1,18 @@
 using Intent.RoslynWeaver.Attributes;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TestProject.NewApplication5.Domain;
+using TestProject.NewApplication5.Infrastructure.Data.DbContext;
 
 
-[assembly: DefaultIntentManaged(Mode.Fully)]
+[assembly: DefaultIntentManaged(Mode.Ignore)]
 [assembly: IntentTemplate("Intent.EntityFrameworkCore.DbContext", Version = "1.0")]
+
+// ZB - set to Intent 'Ignore' to implement Identity changes
 
 namespace TestProject.NewApplication5.Infrastructure.Data
 {
-    public class NewApplication5DbContext : DbContext
+    public class NewApplication5DbContext : IdentityDbContext<AppUser>
     {
         public NewApplication5DbContext(DbContextOptions options) : base(options)
         {

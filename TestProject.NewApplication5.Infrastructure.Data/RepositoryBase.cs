@@ -5,16 +5,20 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Intent.RoslynWeaver.Attributes;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TestProject.NewApplication5.Domain;
+using TestProject.NewApplication5.Infrastructure.Data.DbContext;
 
-[assembly: DefaultIntentManaged(Mode.Fully)]
+[assembly: DefaultIntentManaged(Mode.Ignore)]
 [assembly: IntentTemplate("Intent.EntityFrameworkCore.Repositories.BaseRepository", Version = "1.0")]
+
+// ZB - set to Intent 'Ignore' to implement Identity changes
 
 namespace TestProject.NewApplication5.Infrastructure.Data
 {
     public class RepositoryBase<TDomain, TPersistence, TDbContext> : IRepository<TDomain, TPersistence>
-        where TDbContext : DbContext
+        where TDbContext : IdentityDbContext<AppUser>
         where TPersistence : class, TDomain
         where TDomain : class
     {

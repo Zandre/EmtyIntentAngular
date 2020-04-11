@@ -10,3 +10,7 @@ C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\o
 C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Infrastructure.Data.csproj.CopyComplete
 C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Infrastructure.Data.dll
 C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Infrastructure.Data.pdb
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\bin\Debug\netcoreapp2.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Infrastructure.Data\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Identity.Stores.xml
