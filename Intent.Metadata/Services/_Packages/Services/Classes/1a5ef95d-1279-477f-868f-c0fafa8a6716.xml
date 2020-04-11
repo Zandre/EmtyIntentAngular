@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="1a5ef95d-1279-477f-868f-c0fafa8a6716" type="Folder">
+  <name>DTOs</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e13e7418-b36e-452f-a6cf-ee2ae71b4097</parentFolderId>
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements />
+</class>

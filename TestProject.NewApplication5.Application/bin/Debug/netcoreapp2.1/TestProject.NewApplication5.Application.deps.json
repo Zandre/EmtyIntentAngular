@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "TestProject.NewApplication5.Application/1.0.0": {
+        "dependencies": {
+          "Intent.RoslynWeaver.Attributes": "1.0.0.0"
+        },
+        "runtime": {
+          "TestProject.NewApplication5.Application.dll": {}
+        }
+      },
+      "Intent.RoslynWeaver.Attributes/1.0.0.0": {
+        "runtime": {
+          "Intent.RoslynWeaver.Attributes.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TestProject.NewApplication5.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Intent.RoslynWeaver.Attributes/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

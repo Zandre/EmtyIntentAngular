@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="ebfa7f55-3a25-4350-a04d-6ff3dc84aa40" type="DTO">
+  <name>TestDTO</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>37c7dcdb-47bb-463f-8d85-7462319f43f9</parentFolderId>
+  <literals />
+  <attributes>
+    <attribute id="9bf8672a-2792-4e98-a212-9af86cd8fe31" type="DTO-Field">
+      <name>apprentice</name>
+      <typeReference id="53c1947a-8858-4844-8d7e-131c5a92c111">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="8219e392-f4fa-4797-a6bf-229fc92f1f14" type="DTO-Field">
+      <name>master</name>
+      <typeReference id="d16a1e5b-924f-4bc1-9ae0-bf50f8c8eecb">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+  </attributes>
+  <operations />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
+  </stereotypes>
+  <childElements />
+</class>

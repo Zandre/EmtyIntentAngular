@@ -1,0 +1,11 @@
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\bin\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.deps.json
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\bin\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.dll
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\bin\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.pdb
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.csprojAssemblyReference.cache
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.csproj.CoreCompileInputs.cache
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.AssemblyInfoInputs.cache
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.AssemblyInfo.cs
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.dll
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.pdb
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\bin\Debug\netcoreapp2.1\Intent.RoslynWeaver.Attributes.dll
+C:\Users\zandreb\Desktop\Test5\TestProject.NewApplication5.Application\obj\Debug\netcoreapp2.1\TestProject.NewApplication5.Application.csproj.CopyComplete
