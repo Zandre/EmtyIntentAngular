@@ -27,18 +27,23 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task<TestDTO> GetTestData()
+        public async Task<List<TestDTO>> GetTestData()
         {
-            var sithLord = await _sithLordRepository.FindByIdAsync(new Guid("15E3EF57-6C6E-478E-908A-D7EEB1851D9D"));
+            var sithLords = await _sithLordRepository.FindAllAsync();
 
-            //_sithLordRepository.Add(SithLords.Create(apprentice: "Snoke", master: "Darth Sidious"));
-
-            return TestDTO.Create(apprentice: sithLord.Apprentice,
-                master: sithLord.Master);
+            return sithLords.Select(sith => TestDTO.Create(apprentice: sith.Apprentice, master: sith.Master)).ToList();
         }
 
         public void Dispose()
         {
+        }
+
+        [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
+        public async Task<List<TestDTO>> GetTestDataUnauthorized()
+        {
+            var sithLords = await _sithLordRepository.FindAllAsync();
+
+            return sithLords.Select(sith => TestDTO.Create(apprentice: sith.Apprentice, master: sith.Master)).ToList();
         }
     }
 }

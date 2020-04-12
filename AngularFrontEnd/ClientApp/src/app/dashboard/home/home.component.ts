@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { DashboardService } from '../services/dashboard.service';
 import { HomeDetails } from '../models/home.details.interface';
+import { TestDTO } from 'src/@generated/dtos/test-dto';
 
 @Component({
   selector: 'app-home',
@@ -10,11 +11,11 @@ import { HomeDetails } from '../models/home.details.interface';
 })
 export class HomeComponent implements OnInit {
 
-  homeDetails: HomeDetails;
+  sithLords: TestDTO[];
 
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
-    let homeDetails = this.dashboardService.getHomeDetails();
+    this.sithLords = this.dashboardService.getHomeDetails();
   }
 }

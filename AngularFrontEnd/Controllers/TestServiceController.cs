@@ -34,10 +34,10 @@ namespace AngularFrontEnd.Controllers
 
         [HttpGet("gettestdata")]
         [Authorize(Roles = "ApiUser")]
-        [ProducesResponseType(typeof(TestProject.NewApplication5.Application.DTOs.TestService.TestDTO), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO>), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetTestData()
         {
-            TestProject.NewApplication5.Application.DTOs.TestService.TestDTO result = default(TestProject.NewApplication5.Application.DTOs.TestService.TestDTO);
+            List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO> result = default(List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO>);
             var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
 
             try
@@ -45,6 +45,34 @@ namespace AngularFrontEnd.Controllers
                 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
                 {
                     var appServiceResult = await _appService.GetTestData();
+                    result = appServiceResult;
+
+                    await _dbContext.SaveChangesAsync();
+                    ts.Complete();
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e);
+            }
+
+            return Ok(result);
+
+        }
+
+        [HttpGet("gettestdataunauthorized")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO>), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> GetTestDataUnauthorized()
+        {
+            List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO> result = default(List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO>);
+            var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
+
+            try
+            {
+                using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
+                {
+                    var appServiceResult = await _appService.GetTestDataUnauthorized();
                     result = appServiceResult;
 
                     await _dbContext.SaveChangesAsync();

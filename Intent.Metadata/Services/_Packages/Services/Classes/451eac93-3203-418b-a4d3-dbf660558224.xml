@@ -14,7 +14,7 @@
       <returnType id="03a9e639-12c1-4dfb-8c1d-e4d3c7466b20">
         <typeId>ebfa7f55-3a25-4350-a04d-6ff3dc84aa40</typeId>
         <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
+        <isCollection>true</isCollection>
         <stereotypes />
         <genericTypeParameters />
       </returnType>
@@ -35,6 +35,31 @@
           <addedByDefault>false</addedByDefault>
           <properties>
             <property name="1bbe782d-85bd-4500-96b6-23c4131063cb" value="ApiUser" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+    </operation>
+    <operation id="1ef82821-ffef-4549-9156-3c6d55b3fe04" type="Operation" isAbstract="false">
+      <name>GetTestDataUnauthorized</name>
+      <isMapped>false</isMapped>
+      <returnType id="7c8c685d-79d0-4c1a-a286-fb0816ad5095">
+        <typeId>ebfa7f55-3a25-4350-a04d-6ff3dc84aa40</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>true</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </returnType>
+      <parameters />
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">
+          <addedByDefault>false</addedByDefault>
+          <properties />
+        </stereotype>
+        <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
+          <addedByDefault>false</addedByDefault>
+          <properties>
+            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="AUTO" isActive="true" />
+            <property name="13F033F5-9BC4-47C0-A2DE-92A10E039A23" isActive="true" />
           </properties>
         </stereotype>
       </stereotypes>

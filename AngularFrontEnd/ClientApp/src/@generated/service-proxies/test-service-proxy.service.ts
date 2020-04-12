@@ -25,8 +25,13 @@ export class TestServiceProxyService {
         this.apiBasePath = environment.inoxico_newapplication5_api_basepath;
     }
 
-    getTestData(): Observable<TestDTO> {
+    getTestData(): Observable<TestDTO[]> {
         const url = this.apiBasePath + 'api/testService/getTestData';
-        return this.http.get<TestDTO>(url);
+        return this.http.get<TestDTO[]>(url);
+    }
+
+    getTestDataUnauthorized(): Observable<TestDTO[]> {
+        const url = this.apiBasePath + 'api/testService/getTestDataUnauthorized';
+        return this.http.get<TestDTO[]>(url);
     }
 }

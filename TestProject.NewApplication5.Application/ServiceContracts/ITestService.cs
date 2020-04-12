@@ -12,6 +12,8 @@ namespace TestProject.NewApplication5.Application
     public interface ITestService : IDisposable
     {
 
-        Task<DTOs.TestService.TestDTO> GetTestData();
+        Task<List<DTOs.TestService.TestDTO>> GetTestData();
+
+        Task<List<DTOs.TestService.TestDTO>> GetTestDataUnauthorized();
     }
 }
