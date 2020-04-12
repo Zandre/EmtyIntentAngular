@@ -34,16 +34,18 @@ namespace AngularFrontEnd.Controllers
 
         [HttpGet("login")]
         [AllowAnonymous]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> Login(string userName, string password)
         {
+            string result = default(string);
             var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
 
             try
             {
                 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
                 {
-                    await _appService.Login(userName, password);
+                    var appServiceResult = await _appService.Login(userName, password);
+                    result = appServiceResult;
 
                     await _dbContext.SaveChangesAsync();
                     ts.Complete();
@@ -54,7 +56,7 @@ namespace AngularFrontEnd.Controllers
                 return StatusCode(500, e);
             }
 
-            return Ok();
+            return Ok(result);
 
         }
 

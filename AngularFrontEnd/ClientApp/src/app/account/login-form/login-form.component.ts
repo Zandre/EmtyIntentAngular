@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { Credentials } from 'src/app/shared/model/credentials.interface';
 import { AuthorizationProxyService } from 'src/@generated/service-proxies/authorization-proxy.service';
+import { AccountService } from 'src/app/shared/services/accounts.service';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class LoginFormComponent implements OnInit, OnDestroy {
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute,
-    private authorizeService: AuthorizationProxyService) { }
+    private authorizeService: AuthorizationProxyService,
+    private accountService: AccountService) { }
 
   ngOnInit() {
     // subscribe to router event
@@ -44,7 +46,8 @@ export class LoginFormComponent implements OnInit, OnDestroy {
     this.isRequesting = true;
     this.errors = '';
     if (valid) {
-      this.authorizeService.login(value.email, value.password).subscribe(() => {
+      this.authorizeService.login(value.email, value.password).subscribe((jwt: string) => {
+        this.accountService.successfullLogin(jwt);
         this.router.navigate(['/dashboard/home']);
       }, error => this.errors = error);
     }

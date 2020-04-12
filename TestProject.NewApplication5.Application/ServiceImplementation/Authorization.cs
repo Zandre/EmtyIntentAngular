@@ -37,7 +37,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task Login(string userName, string password)
+        public async Task<string> Login(string userName, string password)
         {
             var identity = await GetClaimsIdentity(userName, password);
             if (identity == null)
@@ -45,6 +45,8 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
                 throw new Exception("Login failed, invalid username or password");
             }
             var jwt = await Tokens.GenerateJwt(identity, _jwtFactory, userName, _jwtOptions, new JsonSerializerSettings { Formatting = Formatting.Indented });
+
+            return jwt;
         }
 
         private async Task<ClaimsIdentity> GetClaimsIdentity(string userName, string password)

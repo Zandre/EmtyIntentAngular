@@ -12,6 +12,6 @@ namespace TestProject.NewApplication5.Application
     public interface IAuthorization : IDisposable
     {
 
-        Task Login(string userName, string password);
+        Task<string> Login(string userName, string password);
     }
 }

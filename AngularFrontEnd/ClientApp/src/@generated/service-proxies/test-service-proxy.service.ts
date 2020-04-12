@@ -26,8 +26,14 @@ export class TestServiceProxyService {
     }
 
     getTestData(): Observable<TestDTO[]> {
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      let authToken = localStorage.getItem('auth_token');
+      headers.append('Authorization', `Bearer ${authToken}`);
+
+
         const url = this.apiBasePath + 'api/testService/getTestData';
-        return this.http.get<TestDTO[]>(url);
+        return this.http.get<TestDTO[]>(url + {headers});
     }
 
     getTestDataUnauthorized(): Observable<TestDTO[]> {

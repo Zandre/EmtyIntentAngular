@@ -23,8 +23,8 @@ export class AuthorizationProxyService {
         this.apiBasePath = environment.inoxico_newapplication5_api_basepath;
     }
 
-    login(userName: string, password: string): Observable<void> {
+    login(userName: string, password: string): Observable<string> {
         const url = this.apiBasePath + 'api/authorization/login';
-        return this.http.get<void>(url, { params: new HttpParams().set('userName', userName).set('password', password) });
+        return this.http.get<string>(url, { params: new HttpParams().set('userName', userName).set('password', password) });
     }
 }

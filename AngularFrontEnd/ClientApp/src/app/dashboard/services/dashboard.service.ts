@@ -20,13 +20,8 @@ constructor(private testService: TestServiceProxyService) {
 
 
   getHomeDetails(): TestDTO[] {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    let authToken = localStorage.getItem('auth_token');
-    headers.append('Authorization', `Bearer ${authToken}`);
-
     let sithLords: TestDTO[] = [];
-    this.testService.getTestDataUnauthorized().subscribe((sith: TestDTO[]) => {
+    this.testService.getTestData().subscribe((sith: TestDTO[]) => {
       sith.forEach(sl => sithLords.push(sl));
     });
 
