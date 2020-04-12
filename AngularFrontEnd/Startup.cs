@@ -19,14 +19,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Intent.RoslynWeaver.Attributes;
 using TestProject.NewApplication5.Domain;
-using SithLordsRepository = TestProject.NewApplication5.Infrastructure.Data.SithLordsRepository;
 using TestProject.NewApplication5.Infrastructure.Data.DbContext;
 using Microsoft.AspNetCore.Identity;
-using AngularFrontEnd.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using AngularFrontEnd.Helpers;
+using TestProject.NewApplication5.Application.Auth;
+using TestProject.NewApplication5.Application.Helpers;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Startup", Version = "1.0")]
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -168,6 +167,8 @@ namespace AngularFrontEnd
             ConfigureDbContext(services);
             services.AddTransient<ITestService, TestService>();
             services.AddTransient<IAccounts, Accounts>();
+            services.AddTransient<IAuthorization, Authorization>();
+            services.AddTransient<IJwtFactory, JwtFactory>();
         }
 
         private void ConfigureDbContext(IServiceCollection services)
