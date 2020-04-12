@@ -32,7 +32,7 @@ namespace AngularFrontEnd.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpPost("login")]
+        [HttpGet("login")]
         [AllowAnonymous]
         [ProducesResponseType((int)HttpStatusCode.OK)]
         public async Task<IActionResult> Login(string userName, string password)

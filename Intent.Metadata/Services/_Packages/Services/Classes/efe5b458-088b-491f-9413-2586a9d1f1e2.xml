@@ -43,7 +43,7 @@
         <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
           <addedByDefault>false</addedByDefault>
           <properties>
-            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="POST" isActive="true" />
+            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="GET" isActive="true" />
             <property name="13F033F5-9BC4-47C0-A2DE-92A10E039A23" isActive="true" />
           </properties>
         </stereotype>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { UserRegistration } from 'src/app/shared/model/user.registration.interface';
 import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-proxy.service';
 
@@ -25,28 +26,11 @@ export class RegistrationFormComponent implements OnInit {
     this.isRequesting = true;
     this.errors = '';
     if (valid) {
-
-      // let createAccountDto: CreateAccountDTO = {
-      //   firstName: value.firstName,
-      //   lastName: value.lastName,
-      //   password: value.password,
-      //   email: value.email
-      // };
-
       this.accountService.createAccount(value.firstName, value.lastName, value.email, value.password)
       .subscribe(() => {
         this.isRequesting = false;
-        console.log('New account created');
-      });
-
-
-        // this.userService.register(value.email,value.password,value.firstName,value.lastName,value.location)
-        //           .finally(() => this.isRequesting = false)
-        //           .subscribe(
-        //             result  => {if(result){
-        //                 this.router.navigate(['/login'],{queryParams: {brandNew: true,email:value.email}});
-        //             }},
-        //             errors =>  this.errors = errors);
+        this.router.navigate(['/login'], {queryParams: {brandNew: true, email: value.email}});
+      }, errors => this.errors = errors);
     }
  }
 }

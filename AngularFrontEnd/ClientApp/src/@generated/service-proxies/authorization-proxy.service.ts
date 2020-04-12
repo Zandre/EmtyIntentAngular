@@ -25,6 +25,6 @@ export class AuthorizationProxyService {
 
     login(userName: string, password: string): Observable<void> {
         const url = this.apiBasePath + 'api/authorization/login';
-        return this.http.post<void>(url, { userName, password });
+        return this.http.get<void>(url, { params: new HttpParams().set('userName', userName).set('password', password) });
     }
 }

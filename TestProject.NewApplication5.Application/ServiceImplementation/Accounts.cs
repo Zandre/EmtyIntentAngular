@@ -29,9 +29,9 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         public async Task CreateAccount(string firstName, string lastName, string email, string password)
         {
             var result = await _userManager.CreateAsync(
-                new AppUser(firstName: firstName, 
-                    lastName: lastName, 
-                    email: email), 
+                new AppUser(firstName: firstName,
+                    lastName: lastName,
+                    email: email),
                 password: password);
 
             if (!result.Succeeded)
