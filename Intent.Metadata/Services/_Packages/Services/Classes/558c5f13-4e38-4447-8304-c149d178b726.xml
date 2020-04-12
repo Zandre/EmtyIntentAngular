@@ -23,6 +23,39 @@
           </typeReference>
           <stereotypes />
         </parameter>
+        <parameter id="50aaf80e-39d6-4493-bf99-ad390345ea9a">
+          <name>lastName</name>
+          <typeReference id="be1c13b0-fa6b-45a6-b71d-540ea8a74c11">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+        <parameter id="54390034-036c-46ed-9203-2fad552bca8e">
+          <name>email</name>
+          <typeReference id="27d1f744-5f1a-43c0-9537-aad5bb9bb178">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+        <parameter id="a835d3d6-057c-4d4a-a89b-07a292405645">
+          <name>password</name>
+          <typeReference id="c931f263-3b12-4ec9-b83e-a112c7c89185">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
       </parameters>
       <stereotypes>
         <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">

@@ -12,6 +12,6 @@ namespace TestProject.NewApplication5.Application
     public interface IAccounts : IDisposable
     {
 
-        Task CreateAccount(string firstName);
+        Task CreateAccount(string firstName, string lastName, string email, string password);
     }
 }

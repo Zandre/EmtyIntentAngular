@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserRegistration } from 'src/app/shared/model/user.registration.interface';
 import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-proxy.service';
-import { CreateAccountDTO } from 'src/@generated/dtos/create-account-dto';
-
-
 
 @Component({
   selector: 'app-registration-form',
@@ -36,7 +33,9 @@ export class RegistrationFormComponent implements OnInit {
       //   email: value.email
       // };
 
-      this.accountService.createAccount(value.firstName).subscribe(() => {
+      this.accountService.createAccount(value.firstName, value.lastName, value.email, value.password)
+      .subscribe(() => {
+        this.isRequesting = false;
         console.log('New account created');
       });
 

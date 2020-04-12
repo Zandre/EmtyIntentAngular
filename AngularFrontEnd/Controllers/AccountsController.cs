@@ -35,7 +35,7 @@ namespace AngularFrontEnd.Controllers
         [HttpGet("createaccount")]
         [AllowAnonymous]
         [ProducesResponseType((int)HttpStatusCode.OK)]
-        public async Task<IActionResult> CreateAccount(string firstName)
+        public async Task<IActionResult> CreateAccount(string firstName, string lastName, string email, string password)
         {
             var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
 
@@ -43,7 +43,7 @@ namespace AngularFrontEnd.Controllers
             {
                 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
                 {
-                    await _appService.CreateAccount(firstName);
+                    await _appService.CreateAccount(firstName, lastName, email, password);
 
                     await _dbContext.SaveChangesAsync();
                     ts.Complete();

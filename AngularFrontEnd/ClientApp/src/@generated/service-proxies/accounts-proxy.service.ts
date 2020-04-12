@@ -23,8 +23,8 @@ export class AccountsProxyService {
         this.apiBasePath = environment.inoxico_newapplication5_api_basepath;
     }
 
-    createAccount(firstName: string): Observable<void> {
+    createAccount(firstName: string, lastName: string, email: string, password: string): Observable<void> {
         const url = this.apiBasePath + 'api/accounts/createAccount';
-        return this.http.get<void>(url, { params: new HttpParams().set('firstName', firstName) });
+        return this.http.get<void>(url, { params: new HttpParams().set('firstName', firstName).set('lastName', lastName).set('email', email).set('password', password) });
     }
 }
