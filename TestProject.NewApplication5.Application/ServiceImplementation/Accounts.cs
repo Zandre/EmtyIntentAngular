@@ -26,16 +26,19 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task CreateAccount()
+        public async Task CreateAccount(string firstName)
         {
-            var result = await _userManager.CreateAsync(new AppUser("Zandre", "Botha", "zb@gmail.com"), "1q2w3e4r%T");
 
-            if (!result.Succeeded)
-            {
-                throw new Exception("something went wrong");
-            }
+            int x = 3;
+            //var result = await _userManager.CreateAsync(new AppUser(createAccountDto.FirstName,
+            //    createAccountDto.LastName,
+            //    createAccountDto.Email),
+            //    createAccountDto.Password);
 
-
+            //if (!result.Succeeded)
+            //{
+            //    throw new Exception("something went wrong");
+            //}
         }
 
         public void Dispose()

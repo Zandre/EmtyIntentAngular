@@ -11,7 +11,19 @@
     <operation id="4af01fc0-3359-4af8-843e-95c820456759" type="Operation" isAbstract="false">
       <name>CreateAccount</name>
       <isMapped>false</isMapped>
-      <parameters />
+      <parameters>
+        <parameter id="906650b3-fbf9-444f-b4c3-4dbb939ba4e0">
+          <name>firstName</name>
+          <typeReference id="a5d83a8b-04dd-483d-a232-182edd6ed4d1">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+      </parameters>
       <stereotypes>
         <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">
           <addedByDefault>false</addedByDefault>
@@ -20,7 +32,7 @@
         <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
           <addedByDefault>false</addedByDefault>
           <properties>
-            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="POST" isActive="true" />
+            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="GET" isActive="true" />
             <property name="13F033F5-9BC4-47C0-A2DE-92A10E039A23" isActive="true" />
           </properties>
         </stereotype>
@@ -33,6 +45,10 @@
       <properties>
         <property name="01FDB27C-50B3-4C04-AC0E-69D211119910" value="api/[controller]" isActive="true" />
       </properties>
+    </stereotype>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
     </stereotype>
   </stereotypes>
   <childElements />

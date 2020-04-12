@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="948cf955-406b-4604-b777-ff4eff54dc91" type="DTO">
+  <name>CreateAccountDTO</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>932b65f2-6ab6-4415-b99f-5ed273539498</parentFolderId>
+  <literals />
+  <attributes>
+    <attribute id="3f2c5f1b-9fc5-438a-9cca-214b4b55cd6e" type="DTO-Field">
+      <name>firstName</name>
+      <typeReference id="13792aa4-01b3-40e7-ab56-bd745fbc99bb">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="b223ee25-8088-4425-bf4e-ce9c287f175c" type="DTO-Field">
+      <name>lastName</name>
+      <typeReference id="c2c9f1b6-3681-4602-b363-8db32ce0c212">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="c27fa114-5cbe-4c9d-9325-61aa99f61062" type="DTO-Field">
+      <name>password</name>
+      <typeReference id="0270c323-6be1-48a1-a506-d52189d1dc07">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="4a7bf750-91c0-4c25-96c7-4ff90e859783" type="DTO-Field">
+      <name>email</name>
+      <typeReference id="477673be-f620-4975-a36e-00047495831a">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+  </attributes>
+  <operations />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
+  </stereotypes>
+  <childElements />
+</class>

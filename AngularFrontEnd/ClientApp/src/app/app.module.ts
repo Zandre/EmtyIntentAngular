@@ -8,6 +8,7 @@ import { AccountModule } from './account/account.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { routing } from './app.routing';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -20,6 +21,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     DashboardModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     routing
   ],
   providers: [],

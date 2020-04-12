@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserRegistration } from 'src/app/shared/model/user.registration.interface';
+import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-proxy.service';
+import { CreateAccountDTO } from 'src/@generated/dtos/create-account-dto';
 
 
 
@@ -15,7 +17,8 @@ export class RegistrationFormComponent implements OnInit {
   isRequesting: boolean;
   submitted = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private accountService: AccountsProxyService) { }
 
   ngOnInit() {
   }
@@ -25,6 +28,19 @@ export class RegistrationFormComponent implements OnInit {
     this.isRequesting = true;
     this.errors = '';
     if (valid) {
+
+      // let createAccountDto: CreateAccountDTO = {
+      //   firstName: value.firstName,
+      //   lastName: value.lastName,
+      //   password: value.password,
+      //   email: value.email
+      // };
+
+      this.accountService.createAccount(value.firstName).subscribe(() => {
+        console.log('New account created');
+      });
+
+
         // this.userService.register(value.email,value.password,value.firstName,value.lastName,value.location)
         //           .finally(() => this.isRequesting = false)
         //           .subscribe(

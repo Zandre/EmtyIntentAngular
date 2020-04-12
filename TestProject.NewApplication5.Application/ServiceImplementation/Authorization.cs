@@ -44,7 +44,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
             {
                 throw new Exception("Login failed, invalid username or password");
             }
-            var jwt = await Tokens.GenerateJwt(identity, _jwtFactory, userName, _jwtOptions, new JsonSerializerSettings { Formatting = Formatting.Indented });            
+            var jwt = await Tokens.GenerateJwt(identity, _jwtFactory, userName, _jwtOptions, new JsonSerializerSettings { Formatting = Formatting.Indented });
         }
 
         private async Task<ClaimsIdentity> GetClaimsIdentity(string userName, string password)
