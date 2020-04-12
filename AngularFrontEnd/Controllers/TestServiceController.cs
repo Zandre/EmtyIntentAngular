@@ -33,7 +33,7 @@ namespace AngularFrontEnd.Controllers
         }
 
         [HttpGet("gettestdata")]
-        [AllowAnonymous]
+        [Authorize(Roles = "ApiUser")]
         [ProducesResponseType(typeof(TestProject.NewApplication5.Application.DTOs.TestService.TestDTO), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetTestData()
         {
