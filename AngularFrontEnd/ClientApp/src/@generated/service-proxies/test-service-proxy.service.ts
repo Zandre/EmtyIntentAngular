@@ -32,8 +32,8 @@ export class TestServiceProxyService {
       headers.append('Authorization', `Bearer ${authToken}`);
 
 
-        const url = this.apiBasePath + 'api/testService/getTestData';
-        return this.http.get<TestDTO[]>(url + {headers});
+        const url = this.apiBasePath + 'api/testService/getTestData' + headers;
+        return this.http.get<TestDTO[]>(url);
     }
 
     getTestDataUnauthorized(): Observable<TestDTO[]> {
