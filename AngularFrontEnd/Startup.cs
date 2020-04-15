@@ -104,10 +104,7 @@ namespace AngularFrontEnd
             });
 
             // api user claim policy
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("ApiUser", policy => policy.RequireClaim(Constants.Strings.JwtClaimIdentifiers.Rol, Constants.Strings.JwtClaims.ApiAccess));
-            });
+            services.AddAuthorization();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
