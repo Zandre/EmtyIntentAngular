@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Http } from '@angular/http';
 
 import { environment } from '../../environments/environment';
 
@@ -27,16 +26,10 @@ export class TestServiceProxyService {
     }
 
     getTestData(): Observable<TestDTO[]> {
-      //let headers = new Headers();
-      //headers.append('Content-Type', 'application/json');
-      let authToken = localStorage.getItem('auth_token');
-      //headers.append('Authorization', `Bearer ${authToken}`);
-
-
       const httpOptions = {
             headers: new HttpHeaders({
                 'Content-Type':  'application/json',
-                'Authorization': `Bearer ${authToken}`
+                'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
             })
         };
 
