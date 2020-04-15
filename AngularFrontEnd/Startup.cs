@@ -24,8 +24,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using TestProject.NewApplication5.Application.Auth;
 using TestProject.NewApplication5.Application.Helpers;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
+using Authorization = TestProject.NewApplication5.Application.ServiceImplementation.Authorization;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Startup", Version = "1.0")]
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -56,6 +61,8 @@ namespace AngularFrontEnd
             // For now manuall registration will do
             services.AddTransient<ISithLordsRepository, SithLordsRepository>();
 
+            services.AddSingleton<IJwtFactory, JwtFactory>();
+            services.TryAddTransient<IHttpContextAccessor, HttpContextAccessor>();
             // jwt wire up
             // Get options from app settings
             var jwtAppSettingOptions = Configuration.GetSection(nameof(JwtIssuerOptions));
@@ -137,6 +144,10 @@ namespace AngularFrontEnd
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
@@ -168,7 +179,6 @@ namespace AngularFrontEnd
             services.AddTransient<ITestService, TestService>();
             services.AddTransient<IAccounts, Accounts>();
             services.AddTransient<IAuthorization, Authorization>();
-            services.AddTransient<IJwtFactory, JwtFactory>();
         }
 
         private void ConfigureDbContext(IServiceCollection services)
