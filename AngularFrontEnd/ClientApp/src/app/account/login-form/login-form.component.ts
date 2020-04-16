@@ -28,6 +28,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
     private accountProxyService: AccountsProxyService) { }
 
   ngOnInit() {
+
     // subscribe to router event
     this.subscription = this.activatedRoute.queryParams.subscribe(
       (param: any) => {

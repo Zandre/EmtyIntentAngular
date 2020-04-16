@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { AccountComponent } from './account.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { routing } from './account.routing';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
@@ -18,7 +17,6 @@ import { AccountService } from '../shared/services/accounts.service';
     SharedModule
   ],
   declarations: [
-    AccountComponent,
     LoginFormComponent,
     RegistrationFormComponent,
     LoginFormComponent,

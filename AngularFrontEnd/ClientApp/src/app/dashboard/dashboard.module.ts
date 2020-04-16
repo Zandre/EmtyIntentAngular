@@ -8,9 +8,9 @@ import { RootComponent } from './root/root.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardService } from './services/dashboard.service';
 
-// TODO : ZB
-//import { AuthGuard } from '../auth.guard';
+
 import { SettingsComponent } from './settings/settings.component';
+import { AuthGuard } from '../auth.guard';
 
 
 @NgModule({
@@ -20,12 +20,15 @@ import { SettingsComponent } from './settings/settings.component';
     routing,
     SharedModule
   ],
-  declarations: [RootComponent,
+  declarations: [
+    RootComponent,
     HomeComponent,
-    SettingsComponent],
+    SettingsComponent
+  ],
   exports:      [ ],
   providers:    [
-    //AuthGuard,
-    DashboardService]
+    AuthGuard,
+    DashboardService
+  ]
 })
 export class DashboardModule { }
