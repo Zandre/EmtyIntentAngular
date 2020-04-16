@@ -13,5 +13,7 @@ namespace TestProject.NewApplication5.Application
     {
 
         Task CreateAccount(string firstName, string lastName, string email, string password);
+
+        Task<string> Login(string userName, string password);
     }
 }

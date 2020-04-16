@@ -30,7 +30,6 @@ using TestProject.NewApplication5.Application.Auth;
 using TestProject.NewApplication5.Application.Helpers;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
-using Authorization = TestProject.NewApplication5.Application.ServiceImplementation.Authorization;
 
 [assembly: IntentTemplate("Intent.AspNetCore.Startup", Version = "1.0")]
 [assembly: DefaultIntentManaged(Mode.Fully)]
@@ -175,7 +174,6 @@ namespace AngularFrontEnd
             ConfigureDbContext(services);
             services.AddTransient<ITestService, TestService>();
             services.AddTransient<IAccounts, Accounts>();
-            services.AddTransient<IAuthorization, Authorization>();
         }
 
         private void ConfigureDbContext(IServiceCollection services)

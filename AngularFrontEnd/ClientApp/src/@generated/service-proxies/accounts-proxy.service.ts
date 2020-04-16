@@ -27,4 +27,9 @@ export class AccountsProxyService {
         const url = this.apiBasePath + 'api/accounts/createAccount';
         return this.http.get<void>(url, { params: new HttpParams().set('firstName', firstName).set('lastName', lastName).set('email', email).set('password', password) });
     }
+
+    login(userName: string, password: string): Observable<string> {
+        const url = this.apiBasePath + 'api/accounts/login';
+        return this.http.get<string>(url, { params: new HttpParams().set('userName', userName).set('password', password) });
+    }
 }

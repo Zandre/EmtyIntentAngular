@@ -58,6 +58,34 @@ namespace AngularFrontEnd.Controllers
 
         }
 
+        [HttpGet("login")]
+        [AllowAnonymous]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        public async Task<IActionResult> Login(string userName, string password)
+        {
+            string result = default(string);
+            var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
+
+            try
+            {
+                using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
+                {
+                    var appServiceResult = await _appService.Login(userName, password);
+                    result = appServiceResult;
+
+                    await _dbContext.SaveChangesAsync();
+                    ts.Complete();
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e);
+            }
+
+            return Ok(result);
+
+        }
+
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);
