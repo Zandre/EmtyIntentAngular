@@ -18,7 +18,19 @@
         <stereotypes />
         <genericTypeParameters />
       </returnType>
-      <parameters />
+      <parameters>
+        <parameter id="9d3d2df5-cc0a-4b90-a76f-6d2f61bbeccf">
+          <name>name</name>
+          <typeReference id="081abb09-5f2e-4119-a207-34e12718bb3d">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+      </parameters>
       <stereotypes>
         <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">
           <addedByDefault>false</addedByDefault>

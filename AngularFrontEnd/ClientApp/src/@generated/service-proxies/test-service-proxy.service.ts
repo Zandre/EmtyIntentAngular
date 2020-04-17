@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
@@ -22,23 +22,16 @@ export class TestServiceProxyService {
     constructor(
         private readonly http: HttpClient
     ) {
-        this.apiBasePath = environment.inoxico_newapplication5_api_basepath;
+        this.apiBasePath = environment.api_basepath;
     }
 
-    getTestData(): Observable<TestDTO[]> {
-      const httpOptions = {
-            headers: new HttpHeaders({
-                'Content-Type':  'application/json',
-                'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
-            })
-        };
-
+    getTestData(name: string): Observable<TestDTO[]> {
         const url = this.apiBasePath + 'api/testService/getTestData';
-        return this.http.get<TestDTO[]>(url, httpOptions);
-    }
+				return this.http.get<TestDTO[]>(url, { params: new HttpParams().set('name', name) , headers: new HttpHeaders({ 'Content-Type':  'application/json', 'Authorization': `Bearer ${localStorage.getItem('auth_token')}`}) });
+		    }
 
     getTestDataUnauthorized(): Observable<TestDTO[]> {
         const url = this.apiBasePath + 'api/testService/getTestDataUnauthorized';
-        return this.http.get<TestDTO[]>(url);
-    }
+				return this.http.get<TestDTO[]>(url, {headers: new HttpHeaders()});
+		    }
 }

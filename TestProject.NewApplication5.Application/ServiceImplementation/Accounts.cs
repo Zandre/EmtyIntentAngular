@@ -61,9 +61,9 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
                 throw new Exception("Login failed, invalid username or password");
             }
             var jwt = await Tokens.GenerateJwt(identity: claimsIdentity,
-                jwtFactory: _jwtFactory, 
-                userName: userName, 
-                jwtOptions: _jwtOptions, 
+                jwtFactory: _jwtFactory,
+                userName: userName,
+                jwtOptions: _jwtOptions,
                 serializerSettings: new JsonSerializerSettings { Formatting = Formatting.Indented });
 
             return jwt;

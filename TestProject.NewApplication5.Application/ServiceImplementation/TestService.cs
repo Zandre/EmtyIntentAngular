@@ -27,7 +27,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task<List<TestDTO>> GetTestData()
+        public async Task<List<TestDTO>> GetTestData(string name)
         {
             var sithLords = await _sithLordRepository.FindAllAsync();
 

@@ -12,7 +12,7 @@ namespace TestProject.NewApplication5.Application
     public interface ITestService : IDisposable
     {
 
-        Task<List<DTOs.TestService.TestDTO>> GetTestData();
+        Task<List<DTOs.TestService.TestDTO>> GetTestData(string name);
 
         Task<List<DTOs.TestService.TestDTO>> GetTestDataUnauthorized();
     }

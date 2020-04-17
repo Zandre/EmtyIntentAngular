@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  inoxico_newapplication5_api_basepath: 'https://localhost:44355/'
+  api_basepath: 'https://localhost:44355/'
 };
 
 /*

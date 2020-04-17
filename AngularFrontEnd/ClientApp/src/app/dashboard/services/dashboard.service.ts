@@ -21,7 +21,7 @@ constructor(private testService: TestServiceProxyService) {
 
   getHomeDetails(): TestDTO[] {
     let sithLords: TestDTO[] = [];
-    this.testService.getTestData().subscribe((sith: TestDTO[]) => {
+    this.testService.getTestData('Anakin SKywalker').subscribe((sith: TestDTO[]) => {
       sith.forEach(sl => sithLords.push(sl));
     });
 

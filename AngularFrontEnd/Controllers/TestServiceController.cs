@@ -35,7 +35,7 @@ namespace AngularFrontEnd.Controllers
         [HttpGet("gettestdata")]
         [Authorize]
         [ProducesResponseType(typeof(List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO>), (int)HttpStatusCode.OK)]
-        public async Task<IActionResult> GetTestData()
+        public async Task<IActionResult> GetTestData(string name)
         {
             List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO> result = default(List<TestProject.NewApplication5.Application.DTOs.TestService.TestDTO>);
             var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
@@ -44,7 +44,7 @@ namespace AngularFrontEnd.Controllers
             {
                 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
                 {
-                    var appServiceResult = await _appService.GetTestData();
+                    var appServiceResult = await _appService.GetTestData(name);
                     result = appServiceResult;
 
                     await _dbContext.SaveChangesAsync();
