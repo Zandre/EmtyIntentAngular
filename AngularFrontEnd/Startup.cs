@@ -58,7 +58,7 @@ namespace AngularFrontEnd
             // ZB
             // This could automatically be done if I can get Intent to generate Unity correctly. 
             // For now manuall registration will do
-            services.AddTransient<ISithLordsRepository, SithLordsRepository>();
+            //services.AddTransient<ISithLordsRepository, SithLordsRepository>();
 
             services.AddSingleton<IJwtFactory, JwtFactory>();
             services.TryAddTransient<IHttpContextAccessor, HttpContextAccessor>();

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TestProject.NewApplication5.Infrastructure.Data.Migrations
 {
-    public partial class IdentityModels : Migration
+    public partial class Init_DB_IdentityModels : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

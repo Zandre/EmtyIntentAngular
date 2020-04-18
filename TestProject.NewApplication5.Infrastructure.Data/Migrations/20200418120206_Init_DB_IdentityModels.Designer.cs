@@ -10,8 +10,8 @@ using TestProject.NewApplication5.Infrastructure.Data;
 namespace TestProject.NewApplication5.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(NewApplication5DbContext))]
-    [Migration("20200411140545_IdentityModels")]
-    partial class IdentityModels
+    [Migration("20200418120206_Init_DB_IdentityModels")]
+    partial class Init_DB_IdentityModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -129,23 +129,6 @@ namespace TestProject.NewApplication5.Infrastructure.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
-                });
-
-            modelBuilder.Entity("TestProject.NewApplication5.Domain.SithLords", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Id");
-
-                    b.Property<string>("Apprentice")
-                        .IsRequired();
-
-                    b.Property<string>("Master")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SithLords","dbo");
                 });
 
             modelBuilder.Entity("TestProject.NewApplication5.Infrastructure.Data.DbContext.AppUser", b =>

@@ -19,19 +19,15 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
     public class TestService : ITestService
     {
 
-        private readonly ISithLordsRepository _sithLordRepository;
-
-        public TestService(ISithLordsRepository sithLordRepository)
+        public TestService()
         {
-            _sithLordRepository = sithLordRepository;
+
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public async Task<List<TestDTO>> GetTestData(string name)
         {
-            var sithLords = await _sithLordRepository.FindAllAsync();
-
-            return sithLords.Select(sith => TestDTO.Create(apprentice: sith.Apprentice, master: sith.Master)).ToList();
+            return new List<TestDTO>();
         }
 
         public void Dispose()
@@ -41,9 +37,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
         public async Task<List<TestDTO>> GetTestDataUnauthorized()
         {
-            var sithLords = await _sithLordRepository.FindAllAsync();
-
-            return sithLords.Select(sith => TestDTO.Create(apprentice: sith.Apprentice, master: sith.Master)).ToList();
+            return new List<TestDTO>();
         }
     }
 }

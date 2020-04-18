@@ -129,23 +129,6 @@ namespace TestProject.NewApplication5.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("TestProject.NewApplication5.Domain.SithLords", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("Id");
-
-                    b.Property<string>("Apprentice")
-                        .IsRequired();
-
-                    b.Property<string>("Master")
-                        .IsRequired();
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SithLords","dbo");
-                });
-
             modelBuilder.Entity("TestProject.NewApplication5.Infrastructure.Data.DbContext.AppUser", b =>
                 {
                     b.Property<string>("Id")
