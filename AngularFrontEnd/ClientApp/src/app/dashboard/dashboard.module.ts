@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { SharedModule } from '../shared/modules/shared.module';
 import { routing } from './dashboard.routing';
 import { RootComponent } from './root/root.component';
@@ -18,7 +20,8 @@ import { AuthGuard } from '../auth.guard';
     CommonModule,
     FormsModule,
     routing,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ],
   declarations: [
     RootComponent,

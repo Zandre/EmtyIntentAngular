@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DashboardService } from '../services/dashboard.service';
-import { HomeDetails } from '../models/home.details.interface';
-import { TestDTO } from 'src/@generated/dtos/test-dto';
+import { faCoffee, faAnchor, faAngry, faBroom } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +9,15 @@ import { TestDTO } from 'src/@generated/dtos/test-dto';
 })
 export class HomeComponent implements OnInit {
 
-  sithLords: TestDTO[];
+  // Font Awesome icons
+  faCoffee = faCoffee;
+  faAnchor = faAnchor;
+  faAngry = faAngry;
+  faBroom = faBroom;
 
-  constructor(private dashboardService: DashboardService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.sithLords = this.dashboardService.getHomeDetails();
+
   }
 }
