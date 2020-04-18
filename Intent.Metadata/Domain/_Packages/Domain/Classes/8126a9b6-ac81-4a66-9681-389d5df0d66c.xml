@@ -56,7 +56,59 @@
       <stereotypes />
     </attribute>
   </attributes>
-  <operations />
+  <operations>
+    <operation id="8c3e82b1-9045-4a2a-bb7e-c95ec21cb7a5" type="Operation" isAbstract="false">
+      <name>UpdateDetails</name>
+      <isMapped>false</isMapped>
+      <parameters>
+        <parameter id="631b7cd5-f4c1-481a-a4e3-38d84163ca08">
+          <name>name</name>
+          <typeReference id="7410e0f5-5fa5-449d-bba6-23a1e1e4c789">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+        <parameter id="bcfca1ed-6c22-4e41-8c10-53a336d9e9eb">
+          <name>side</name>
+          <typeReference id="43156793-33dc-4495-af8e-2175949120a3">
+            <typeId>5aa3093a-7e7d-42dd-b4cd-e4ad472d24f0</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+        <parameter id="b70f5214-23f4-40ed-b7aa-941f6885dc10">
+          <name>speciality</name>
+          <typeReference id="f95e0847-be89-44b2-8120-b8d2294f8b43">
+            <typeId>175aa088-a8d2-431e-b50a-e8cb2010e006</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+        <parameter id="6fec2db8-8bcd-40dc-b93f-e561df23c4ed">
+          <name>lightSaberColor</name>
+          <typeReference id="1dca6e68-fb12-4d2e-9f5f-f7879f2d6e71">
+            <typeId>bdf7a1a5-57c2-4f32-8bef-da246bbd198e</typeId>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <stereotypes />
+        </parameter>
+      </parameters>
+      <stereotypes />
+    </operation>
+  </operations>
   <stereotypes />
   <childElements />
 </class>

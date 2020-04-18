@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="f074d44c-1606-4536-8b12-022be80be829" type="DTO">
+  <name>CreateForceUser</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>37c7dcdb-47bb-463f-8d85-7462319f43f9</parentFolderId>
+  <literals />
+  <attributes>
+    <attribute id="7a2a6a84-7b5d-4344-9318-ac4e69677f62" type="DTO-Field">
+      <name>name</name>
+      <typeReference id="3fbd7fe1-fed2-4001-80f5-cbebbee4f926">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="38fc7d8c-f243-48e8-88c9-b1632a4de9a5" type="DTO-Field">
+      <name>side</name>
+      <typeReference id="f4d8485b-3d39-4d96-8d4b-7c9ca82cb95f">
+        <typeId>5aa3093a-7e7d-42dd-b4cd-e4ad472d24f0</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="a64954e7-b439-4283-a8bf-17bcdf742130" type="DTO-Field">
+      <name>speciality</name>
+      <typeReference id="a7090e3c-5e48-455a-b873-e1a8ed6491a2">
+        <typeId>175aa088-a8d2-431e-b50a-e8cb2010e006</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="7971743e-7496-4013-a925-79261b462227" type="DTO-Field">
+      <name>lightSaberColor</name>
+      <typeReference id="e9e79298-ce7b-480f-9f05-e7ce37c10f4a">
+        <typeId>bdf7a1a5-57c2-4f32-8bef-da246bbd198e</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+  </attributes>
+  <operations />
+  <stereotypes />
+  <childElements />
+</class>

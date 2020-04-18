@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <class id="37c7dcdb-47bb-463f-8d85-7462319f43f9" type="Folder">
-  <name>TestService</name>
+  <name>ForceUsers_TestService</name>
   <isAbstract>false</isAbstract>
   <genericTypes />
   <isMapped>false</isMapped>

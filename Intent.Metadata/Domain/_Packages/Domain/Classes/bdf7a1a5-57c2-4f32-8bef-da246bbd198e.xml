@@ -25,15 +25,6 @@
   </literals>
   <attributes />
   <operations />
-  <stereotypes>
-    <stereotype stereotypeDefinitionId="30c5995e-17ab-4cc7-8881-3e9561ab06fe">
-      <addedByDefault>false</addedByDefault>
-      <properties>
-        <property name="67913852-1e61-4d9d-997e-cdfb7d9196fb" isActive="true" />
-        <property name="8CCCD630-6AF9-41FA-8E5F-414860AD89BB" value="" isActive="true" />
-        <property name="76668E7B-8FC2-4C14-B6AA-E36854E5E499" value="false" isActive="true" />
-      </properties>
-    </stereotype>
-  </stereotypes>
+  <stereotypes />
   <childElements />
 </class>

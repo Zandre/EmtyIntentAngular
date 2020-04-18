@@ -25,5 +25,6 @@ namespace TestProject.NewApplication5.Domain
 
         LightSaberColor LightSaberColor { get; set; }
 
+        void UpdateDetails(string name, Side side, Speciality speciality, LightSaberColor lightSaberColor);
     }
 }

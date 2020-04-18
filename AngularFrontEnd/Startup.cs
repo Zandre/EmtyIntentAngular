@@ -172,7 +172,8 @@ namespace AngularFrontEnd
         public void IntentConfiguredServices(IServiceCollection services)
         {
             ConfigureDbContext(services);
-            services.AddTransient<ITestService, TestService>();
+            services.AddTransient<IForceUsers_TestService, ForceUsers_TestService>();
+            services.AddTransient<IForceUsersQueryService_TestService, ForceUsersQueryService_TestService>();
             services.AddTransient<IAccounts, Accounts>();
         }
 
