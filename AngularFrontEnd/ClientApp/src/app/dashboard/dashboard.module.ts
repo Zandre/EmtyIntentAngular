@@ -1,8 +1,12 @@
+// Angular modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Npm installations
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ToastrModule } from 'ngx-toastr';
 
 import { SharedModule } from '../shared/modules/shared.module';
 import { routing } from './dashboard.routing';
@@ -15,13 +19,18 @@ import { SettingsComponent } from './settings/settings.component';
 import { AuthGuard } from '../auth.guard';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     routing,
     SharedModule,
-    FontAwesomeModule
+
+    FontAwesomeModule,
+
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot() // ToastrModule added
   ],
   declarations: [
     RootComponent,

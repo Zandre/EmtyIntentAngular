@@ -1,11 +1,28 @@
 
 <div class="mt-20">
   <span class="h2">Font Awesome icons</span>
-<div class="row">
+<div class="row m-4">
   <fa-icon [icon]="faCoffee"></fa-icon>
   <fa-icon [icon]="faAnchor"></fa-icon>
   <fa-icon [icon]="faAngry"></fa-icon>
   <fa-icon [icon]="faBroom"></fa-icon>
+</div>
+<div>
+  <span class="h2">NgxToastr</span>
+</div>
+<div class="row">
+  <a class="btn btn-success m-4" role="button" (click)="showSuccessToast()">
+    <fa-icon [fixedWidth]="true" [icon]="faThumbsUp"></fa-icon> Success
+  </a>
+  <a class="btn btn-info m-4" role="button" (click)="showInfoToast()">
+    <fa-icon [fixedWidth]="true" [icon]="faInfo"></fa-icon> Info
+  </a>
+  <a class="btn btn-warning m-4" role="button" (click)="showWarnToast()">
+    <fa-icon [fixedWidth]="true" [icon]="faExclamationTriangle"></fa-icon> Warn
+  </a>
+  <a class="btn btn-danger m-4" role="button" (click)="showErrorToast()">
+    <fa-icon [fixedWidth]="true" [icon]="faTimes"></fa-icon>  Error
+  </a>
 </div>
 </div>
 
