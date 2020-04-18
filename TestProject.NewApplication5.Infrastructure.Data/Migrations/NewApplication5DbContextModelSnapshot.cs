@@ -129,6 +129,26 @@ namespace TestProject.NewApplication5.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("TestProject.NewApplication5.Domain.ForceUsers", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id");
+
+                    b.Property<int>("LightSaberColor");
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.Property<int>("Side");
+
+                    b.Property<int>("Speciality");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ForceUsers","dbo");
+                });
+
             modelBuilder.Entity("TestProject.NewApplication5.Infrastructure.Data.DbContext.AppUser", b =>
                 {
                     b.Property<string>("Id")

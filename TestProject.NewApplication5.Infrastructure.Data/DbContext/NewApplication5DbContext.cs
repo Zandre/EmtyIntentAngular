@@ -19,7 +19,7 @@ namespace TestProject.NewApplication5.Infrastructure.Data
 
         }
 
-        //public DbSet<SithLords> SithLordses { get; set; }
+        public DbSet<ForceUsers> ForceUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace TestProject.NewApplication5.Infrastructure.Data
 
             ConfigureModel(modelBuilder);
 
-            //modelBuilder.ApplyConfiguration(new SithLordsMapping());
+            modelBuilder.ApplyConfiguration(new ForceUsersMapping());
         }
 
         [IntentManaged(Mode.Ignore)]
