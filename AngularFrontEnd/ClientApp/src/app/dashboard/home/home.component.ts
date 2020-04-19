@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   faAnchor = faAnchor;
   faAngry = faAngry;
   faBroom = faBroom;
-  faThumbsUp = faThumbsUp;S
+  faThumbsUp = faThumbsUp;
   faTimes = faTimes;
   faInfo = faInfo;
   faExclamationTriangle = faExclamationTriangle;

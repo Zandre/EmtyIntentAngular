@@ -1,10 +1,9 @@
-// Angular modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
-// Npm installations
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -30,7 +29,9 @@ import { AuthGuard } from '../auth.guard';
     FontAwesomeModule,
 
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot() // ToastrModule added
+    ToastrModule.forRoot(), // ToastrModule added,
+
+    FlexLayoutModule
   ],
   declarations: [
     RootComponent,
