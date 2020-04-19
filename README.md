@@ -14,7 +14,6 @@ Official Font Awesome component for Angular can be found [here](https://fontawes
 Toast messages used in the project can be found [here](https://www.npmjs.com/package/ngx-toastr)
 
 ## ng -- version
-`
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
    / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
@@ -46,4 +45,4 @@ Package                           Version
 rxjs                              6.2.1
 typescript                        2.7.2
 webpack                           4.8.3
-`
+
