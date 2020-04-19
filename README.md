@@ -13,7 +13,13 @@ Official Font Awesome component for Angular can be found [here](https://fontawes
 ## Toast Messages
 Toast messages used in the project can be found [here](https://www.npmjs.com/package/ngx-toastr)
 
+## Angular Flex Layout
+Repo/installation instructions can be found [here](https://github.com/angular/flex-layout) and demos can be found [here](https://tburleson-layouts-demos.firebaseapp.com/#/docs)
+
 ## ng -- version
+
+I will endeavour to upgrade all these to the latest before I start using this template officially
+
 ```
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
@@ -38,7 +44,9 @@ Package                           Version
 @angular-devkit/build-optimizer   0.6.8
 @angular-devkit/core              0.6.8
 @angular-devkit/schematics        0.6.8
+@angular/cdk                      6.4.7
 @angular/cli                      6.0.8
+@angular/flex-layout              6.0.0-beta.16
 @angular/language-service         6.0.5
 @ngtools/webpack                  6.0.8
 @schematics/angular               0.6.8
@@ -46,4 +54,5 @@ Package                           Version
 rxjs                              6.2.1
 typescript                        2.7.2
 webpack                           4.8.3
+
 ```
