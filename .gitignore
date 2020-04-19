@@ -1,0 +1,53 @@
+*.suo
+*.user
+*.sln.docstates
+bin/
+obj/
+Installers/
+*.unc-backup*
+*.user
+_Resharper.*
+TestResults
+*.log
+*.o 
+*.lo 
+*.la 
+*.al 
+.libs 
+*.so 
+.so.[0-9] 
+*.a 
+*.pyc 
+*.pyo 
+*.rej 
+*.js.map
+**/Templates/**/*.txt
+sys$command
+*.svclog
+*.templateOutput
+node_modules/
+.vs/
+UpgradeLog.htm
+**/wwwroot/js/app.js
+**/wwwroot/js/app.min.js
+
+# As per: https://docs.nuget.org/consume/package-restore#git
+
+# Ignore NuGet Packages
+*.nupkg
+# Ignore the packages folder
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# And not this other packages folder:
+!**/Inoxico.Automation.Plugins/Packages/**
+
+# Intent Packages:
+**/Intent.Packages/*
+**/Intent.Modules/*
+
+**/Automation/Inoxico.Packages/*
+**/Out/**
