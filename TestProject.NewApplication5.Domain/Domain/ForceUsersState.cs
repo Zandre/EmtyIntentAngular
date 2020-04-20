@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using AngularFrontEnd.Enums;
 using Intent.RoslynWeaver.Attributes;
 using TestProject.NewApplication5.Domain.Common;
-using static TestProject.NewApplication5.Domain.Enums;
 
 [assembly: DefaultIntentManaged(Mode.Fully)]
 [assembly: IntentTemplate("Intent.Entities.DomainEntityState", Version = "1.0")]

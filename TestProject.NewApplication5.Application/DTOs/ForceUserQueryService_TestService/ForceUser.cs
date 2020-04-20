@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using AngularFrontEnd.Enums;
 using Intent.RoslynWeaver.Attributes;
-using static TestProject.NewApplication5.Domain.Enums;
 
 
 [assembly: DefaultIntentManaged(Mode.Fully)]

@@ -22,7 +22,7 @@
     <attribute id="d5f99889-0b4a-4dae-9cc6-f55479032a9a" type="DTO-Field">
       <name>side</name>
       <typeReference id="fcc74b03-91fb-4a05-8204-055ff2686eb1">
-        <typeId>5aa3093a-7e7d-42dd-b4cd-e4ad472d24f0</typeId>
+        <typeId>596cf2af-4ad5-4dde-8bc1-7a1c7950c08f</typeId>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
@@ -34,7 +34,7 @@
     <attribute id="7f22c367-4db1-4422-95db-78cb7ba41bd3" type="DTO-Field">
       <name>speciality</name>
       <typeReference id="13a7f60d-8e03-42ad-ba98-156a768d146f">
-        <typeId>175aa088-a8d2-431e-b50a-e8cb2010e006</typeId>
+        <typeId>a20ba4ff-bc8a-4407-902a-47bfec9822c5</typeId>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
@@ -46,7 +46,7 @@
     <attribute id="67d57e5b-90e9-4353-b8b5-754cef4b911e" type="DTO-Field">
       <name>lightSaberColor</name>
       <typeReference id="42d4b5f7-e122-4e97-adc6-a4d3240ee7f9">
-        <typeId>bdf7a1a5-57c2-4f32-8bef-da246bbd198e</typeId>
+        <typeId>7c95e153-6498-4127-8c61-75ce35176774</typeId>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
@@ -69,6 +69,11 @@
     </attribute>
   </attributes>
   <operations />
-  <stereotypes />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
+  </stereotypes>
   <childElements />
 </class>

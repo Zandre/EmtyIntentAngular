@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="596cf2af-4ad5-4dde-8bc1-7a1c7950c08f" type="Enum">
+  <name>Side</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>fff80a12-ddce-4b0e-a852-0f824ffeb85b</parentFolderId>
+  <literals>
+    <literal id="c0899c80-e29b-4161-9fc4-1ec41c1f0632" type="Enum-Literal">
+      <name>Light</name>
+      <value>1</value>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
+          <addedByDefault>false</addedByDefault>
+          <properties>
+            <property name="f1068d80-1d23-4592-acaf-d8a1dea6a2eb" isActive="true" />
+            <property name="f49f840b-e5a4-4f48-ab45-1ea2b5cf4c2b" value="Light" isActive="true" />
+            <property name="5f1e64e5-6791-494f-999b-f83e15a803f7" value="${Description}" isActive="true" />
+            <property name="de5b6adb-9d47-4c5b-ab01-61d59aa35a75" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+    </literal>
+    <literal id="09aec7d0-e0f4-428f-87f8-43432a8b35c6" type="Enum-Literal">
+      <name>Dark</name>
+      <value>2</value>
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
+          <addedByDefault>false</addedByDefault>
+          <properties>
+            <property name="f1068d80-1d23-4592-acaf-d8a1dea6a2eb" isActive="true" />
+            <property name="f49f840b-e5a4-4f48-ab45-1ea2b5cf4c2b" value="Dark" isActive="true" />
+            <property name="5f1e64e5-6791-494f-999b-f83e15a803f7" value="${Description}" isActive="true" />
+            <property name="de5b6adb-9d47-4c5b-ab01-61d59aa35a75" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+    </literal>
+  </literals>
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements />
+</class>

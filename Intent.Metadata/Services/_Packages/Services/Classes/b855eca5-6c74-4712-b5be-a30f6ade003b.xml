@@ -41,6 +41,10 @@
         <property name="01FDB27C-50B3-4C04-AC0E-69D211119910" value="api/[controller]" isActive="true" />
       </properties>
     </stereotype>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
   </stereotypes>
   <childElements />
 </class>

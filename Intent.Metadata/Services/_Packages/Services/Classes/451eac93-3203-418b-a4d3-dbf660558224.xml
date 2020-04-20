@@ -112,6 +112,10 @@
         <property name="1bbe782d-85bd-4500-96b6-23c4131063cb" isActive="true" />
       </properties>
     </stereotype>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
   </stereotypes>
   <childElements />
 </class>

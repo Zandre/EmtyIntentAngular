@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<stereotypeDefinition id="3f59365f-66cb-4b3a-8064-fc73b92425c0">
+  <name>Enum Literal Info</name>
+  <icon type="FontAwesome" source="info-circle" />
+  <displayIcon>false</displayIcon>
+  <displayFunction>[${Description ? Description : "No Description"}${OptionGroup ? " - " + OptionGroup : ""}]</displayFunction>
+  <targetElements>
+    <element>enum-literal</element>
+  </targetElements>
+  <autoAdd>false</autoAdd>
+  <parentFolderId>2d42cc4d-6544-4d6b-9394-137c25bd1449</parentFolderId>
+  <properties>
+    <property id="f1068d80-1d23-4592-acaf-d8a1dea6a2eb">
+      <name>Option Group</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="f49f840b-e5a4-4f48-ab45-1ea2b5cf4c2b">
+      <name>Description</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="5f1e64e5-6791-494f-999b-f83e15a803f7">
+      <comment>This field can be used to customise the list display that is generated for our front ends. (e.g. ${MyProperty})</comment>
+      <name>List Description</name>
+      <type>string</type>
+      <controlType>text</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <defaultValue>${Description}</defaultValue>
+      <valueOptions />
+      <lookupTypes />
+    </property>
+    <property id="de5b6adb-9d47-4c5b-ab01-61d59aa35a75">
+      <comment>This field can be used to customise the list order that is generated for our front ends.</comment>
+      <name>Order</name>
+      <type>number</type>
+      <controlType>number</controlType>
+      <optionsSource>n/a</optionsSource>
+      <placeholder />
+      <valueOptions />
+      <lookupTypes />
+    </property>
+  </properties>
+</stereotypeDefinition>
