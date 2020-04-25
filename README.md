@@ -8,7 +8,7 @@ One of the largest influences in this repo has been [this post](https://fullstac
 All services; db models; patterns; dependency injection gets done with the help of [Intent Architect](https://github.com/IntentSoftware/IntentArchitect) and advise from a few fellow devs
 
 ## Angular Material
-Installation (here)[https://material.angular.io/guide/getting-started]
+Installation [here](https://material.angular.io/guide/getting-started)
 I chose the deep purple and amber theme for now
 
 ## Angular Flex Layout
