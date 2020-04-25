@@ -12,6 +12,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { routing } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
       FormsModule,
       HttpClientModule,
       routing,
-      FontAwesomeModule
+      FontAwesomeModule,
+      BrowserAnimationsModule
    ],
    providers: [],
    bootstrap: [

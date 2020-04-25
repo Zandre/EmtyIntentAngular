@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { MatSliderModule } from '@angular/material/slider';
+
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
 
@@ -36,7 +38,9 @@ import { GlobalErrorHandler } from '../shared/error-handler/error-handler';
       preventDuplicates: true,
     }),
 
-    FlexLayoutModule
+    FlexLayoutModule,
+
+    MatSliderModule
   ],
   declarations: [
     RootComponent,
