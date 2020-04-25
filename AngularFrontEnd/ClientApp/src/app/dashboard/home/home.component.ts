@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { faCoffee, faAnchor, faAngry, faBroom, faThumbsUp, faInfo, faTimes, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import { ToastrService } from 'ngx-toastr';
+import { ForceUsersQueryService_TestServiceProxyService } from 'src/@generated/service-proxies/force-users-query-service_-test-service-proxy.service';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,11 @@ export class HomeComponent implements OnInit {
   faInfo = faInfo;
   faExclamationTriangle = faExclamationTriangle;
 
-  constructor(private toastr: ToastrService) { }
+  constructor(private toastr: ToastrService,
+    private readonly forceUsersQueryService_TestServiceProxyService: ForceUsersQueryService_TestServiceProxyService)
+    {
+
+     }
 
   ngOnInit() {
 
@@ -44,5 +49,9 @@ export class HomeComponent implements OnInit {
 
   typeScriptError(): void {
     throw new Error('TypeScipt error works');
+  }
+
+  cSharpError(): void {
+    this.forceUsersQueryService_TestServiceProxyService.causeCSharpError().subscribe();
   }
 }

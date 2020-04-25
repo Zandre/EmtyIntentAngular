@@ -33,6 +33,20 @@
         </stereotype>
       </stereotypes>
     </operation>
+    <operation id="4af48d4c-cded-4c49-90f5-92acd03e3513" type="Operation" isAbstract="false">
+      <name>CauseCSharpError</name>
+      <isMapped>false</isMapped>
+      <parameters />
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
+          <addedByDefault>false</addedByDefault>
+          <properties>
+            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="AUTO" isActive="true" />
+            <property name="13F033F5-9BC4-47C0-A2DE-92A10E039A23" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+    </operation>
   </operations>
   <stereotypes>
     <stereotype stereotypeDefinitionId="592B2300-6406-47EC-B7FC-358F87F6E4A4">

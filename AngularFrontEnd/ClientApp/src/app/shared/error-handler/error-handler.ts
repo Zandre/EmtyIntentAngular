@@ -36,7 +36,7 @@ export class GlobalErrorHandler implements ErrorHandler {
      if(stackString) {
        messageForUser = messageForUser + '\nStack trace: ' + stackString;
      }
-     this.toastrService.error(messageForUser, 'Error');
+     this.toastrService.error(messageForUser, 'Error', { timeOut: 3000, progressBar: true });
 
     //  // IMPORTANT: Rethrow the error otherwise it gets swallowed
      throw error;

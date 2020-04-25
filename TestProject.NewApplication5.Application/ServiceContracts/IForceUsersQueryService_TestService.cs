@@ -13,5 +13,7 @@ namespace TestProject.NewApplication5.Application
     {
 
         Task<List<DTOs.ForceUserQueryService_TestService.ForceUser>> GetForceUsers();
+
+        void CauseCSharpError();
     }
 }

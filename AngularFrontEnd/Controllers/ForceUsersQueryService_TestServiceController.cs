@@ -60,6 +60,32 @@ namespace AngularFrontEnd.Controllers
 
         }
 
+        [HttpPost("causecsharperror")]
+        [AllowAnonymous]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        public IActionResult CauseCSharpError()
+        {
+            var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
+
+            try
+            {
+                using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso))
+                {
+                    _appService.CauseCSharpError();
+
+                    _dbContext.SaveChanges();
+                    ts.Complete();
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e);
+            }
+
+            return Ok();
+
+        }
+
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);

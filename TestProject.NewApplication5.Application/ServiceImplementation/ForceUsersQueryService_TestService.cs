@@ -31,5 +31,11 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         public void Dispose()
         {
         }
+
+        [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
+        public void CauseCSharpError()
+        {
+            throw new Exception("C# error message");
+        }
     }
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
@@ -27,6 +27,11 @@ export class ForceUsersQueryService_TestServiceProxyService {
 
     getForceUsers(): Observable<ForceUser[]> {
         const url = this.apiBasePath + 'api/forceUsersQueryService_TestService/getForceUsers';
-				return this.http.get<ForceUser[]>(url, {headers: new HttpHeaders()});
-		    }
+        return this.http.get<ForceUser[]>(url);
+    }
+
+    causeCSharpError(): Observable<void> {
+        const url = this.apiBasePath + 'api/forceUsersQueryService_TestService/causeCSharpError';
+        return this.http.post<void>(url, null);
+    }
 }
