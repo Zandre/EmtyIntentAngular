@@ -18,8 +18,6 @@ Repo/installation instructions can be found [here](https://github.com/angular/fl
 
 ## ng -- version
 
-I will endeavour to upgrade all these to the latest before I start using this template officially
-
 ```
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
@@ -27,32 +25,33 @@ I will endeavour to upgrade all these to the latest before I start using this te
   / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
  /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
                 |___/
+    
 
-
-Angular CLI: 6.0.8
+Angular CLI: 9.1.3
 Node: 10.15.3
 OS: win32 x64
-Angular: 6.1.10
-... animations, common, compiler, compiler-cli, core, forms
-... http, platform-browser, platform-browser-dynamic
+
+Angular: 9.1.3
+... animations, cli, common, compiler, compiler-cli, core, forms
+... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
+Ivy Workspace: Yes
 
 Package                           Version
 -----------------------------------------------------------
-@angular-devkit/architect         0.6.8
-@angular-devkit/build-angular     0.6.8
-@angular-devkit/build-optimizer   0.6.8
-@angular-devkit/core              0.6.8
-@angular-devkit/schematics        0.6.8
-@angular/cdk                      6.4.7
-@angular/cli                      6.0.8
-@angular/flex-layout              6.0.0-beta.16
-@angular/language-service         6.0.5
-@ngtools/webpack                  6.0.8
-@schematics/angular               0.6.8
-@schematics/update                0.6.8
-rxjs                              6.2.1
-typescript                        2.7.2
-webpack                           4.8.3
+@angular-devkit/architect         0.901.3
+@angular-devkit/build-angular     0.901.3
+@angular-devkit/build-optimizer   0.901.3
+@angular-devkit/build-webpack     0.901.3
+@angular-devkit/core              9.1.3
+@angular-devkit/schematics        9.1.3
+@angular/cdk                      9.2.1
+@angular/flex-layout              9.0.0-beta.29
+@ngtools/webpack                  9.1.3
+@schematics/angular               9.1.3
+@schematics/update                0.901.3
+rxjs                              6.5.5
+typescript                        3.8.3
+webpack                           4.42.0
 
 ```
