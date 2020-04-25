@@ -7,19 +7,23 @@ One of the largest influences in this repo has been [this post](https://fullstac
 ## Intent Architect
 All services; db models; patterns; dependency injection gets done with the help of [Intent Architect](https://github.com/IntentSoftware/IntentArchitect) and advise from a few fellow devs
 
+## Angular Material
+Installation (here)[https://material.angular.io/guide/getting-started]
+I chose the deep purple and amber theme for now
+
+## Angular Flex Layout
+Repo/installation instructions can be found [here](https://github.com/angular/flex-layout) and demos can be found [here](https://tburleson-layouts-demos.firebaseapp.com/#/docs)
+
 ## Font Awesome
 Official Font Awesome component for Angular can be found [here](https://fontawesome.com/how-to-use/on-the-web/using-with/angular)
 
 ## Toast Messages
 Toast messages used in the project can be found [here](https://www.npmjs.com/package/ngx-toastr)
 
-## Angular Flex Layout
-Repo/installation instructions can be found [here](https://github.com/angular/flex-layout) and demos can be found [here](https://tburleson-layouts-demos.firebaseapp.com/#/docs)
-
 ## Typescript error handling
 Implemented global error handling for typescript errors by following [this post](https://medium.com/@amcdnl/global-error-handling-with-angular2-6b992bdfb59c) and installing [stacktrace-js](https://www.npmjs.com/package/stacktrace-js)
 
-## ng -- version
+## ng version
 
 ```
      _                      _                 ____ _     ___
@@ -50,6 +54,7 @@ Package                           Version
 @angular-devkit/schematics        9.1.3
 @angular/cdk                      9.2.1
 @angular/flex-layout              9.0.0-beta.29
+@angular/material                 9.2.1
 @ngtools/webpack                  9.1.3
 @schematics/angular               9.1.3
 @schematics/update                0.901.3
