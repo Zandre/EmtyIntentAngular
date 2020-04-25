@@ -15,8 +15,7 @@ export class PageNotFoundComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log("FA: ", faQuestionCircle);
-    console.log("FA: ", faHome);
+
   }
 
 }

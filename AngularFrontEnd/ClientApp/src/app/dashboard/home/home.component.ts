@@ -41,4 +41,8 @@ export class HomeComponent implements OnInit {
   showErrorToast(): void {
     this.toastr.error('Hello world!', 'Toastr fun!');
   }
+
+  typeScriptError(): void {
+    throw new Error('TypeScipt error works');
+  }
 }

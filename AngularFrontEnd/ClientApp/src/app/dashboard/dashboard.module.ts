@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,7 @@ import { DashboardService } from './services/dashboard.service';
 
 import { SettingsComponent } from './settings/settings.component';
 import { AuthGuard } from '../auth.guard';
+import { GlobalErrorHandler } from '../shared/error-handler/error-handler';
 
 
 
@@ -29,7 +30,11 @@ import { AuthGuard } from '../auth.guard';
     FontAwesomeModule,
 
     BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      progressBar: true,
+      preventDuplicates: true,
+    }),
 
     FlexLayoutModule
   ],
@@ -41,7 +46,11 @@ import { AuthGuard } from '../auth.guard';
   exports:      [ ],
   providers:    [
     AuthGuard,
-    DashboardService
+    DashboardService,
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorHandler
+    },
   ]
 })
 export class DashboardModule { }
