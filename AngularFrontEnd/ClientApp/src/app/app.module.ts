@@ -13,6 +13,7 @@ import { routing } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForceUsersModule } from './force-users/force-users.module';
 
 
 @NgModule({
@@ -24,13 +25,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
    ],
    imports: [
       AccountModule,
-      DashboardModule,
       BrowserModule,
       FormsModule,
       HttpClientModule,
       routing,
       FontAwesomeModule,
-      BrowserAnimationsModule
+      BrowserAnimationsModule,
+
+      DashboardModule,
+      ForceUsersModule
    ],
    providers: [],
    bootstrap: [
