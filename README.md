@@ -14,6 +14,14 @@ I chose the deep purple and amber theme for now
 ## Angular Flex Layout
 Repo/installation instructions can be found [here](https://github.com/angular/flex-layout) and demos can be found [here](https://tburleson-layouts-demos.firebaseapp.com/#/docs)
 
+## Hot module replacement
+Installation [here](https://www.npmjs.com/package/@angularclass/hmr)
+
+## Bootswatch Theme
+Chose Pulse to go along with material deep purple and amber  
+[Downloads](https://bootswatch.com/)  
+[Demo](https://bootswatch.com/pulse/)
+
 ## Font Awesome
 Official Font Awesome component for Angular can be found [here](https://fontawesome.com/how-to-use/on-the-web/using-with/angular)
 
