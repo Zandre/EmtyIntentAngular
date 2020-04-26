@@ -38,7 +38,7 @@
     </literal>
     <literal id="3f7e6e68-1400-4b27-afc8-c354a450b1ef" type="Enum-Literal">
       <name>Red</name>
-      <value>2</value>
+      <value>3</value>
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>

@@ -15,7 +15,7 @@ namespace AngularFrontEnd.Enums
         Blue = 2,
 
         [Description("Red")]
-        Red = 2,
+        Red = 3,
 
         [Description("Purple")]
         Purple = 4,

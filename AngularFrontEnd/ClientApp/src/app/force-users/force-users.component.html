@@ -1,3 +1,4 @@
+<h1>Force Users</h1>
 <table fxFill mat-table [dataSource]="this.forceUsers" class="mat-elevation-z8" #forceUserTable>
 
   <ng-container matColumnDef="Name">
@@ -7,17 +8,27 @@
 
   <ng-container matColumnDef="Side">
     <th mat-header-cell *matHeaderCellDef> Side </th>
-    <td mat-cell *matCellDef="let forceUser"> {{forceUser.side}} </td>
+    <td mat-cell *matCellDef="let forceUser"> {{forceUser.sideDescription}} </td>
   </ng-container>
 
   <ng-container matColumnDef="Speciality">
     <th mat-header-cell *matHeaderCellDef> Speciality </th>
-    <td mat-cell *matCellDef="let forceUser"> {{forceUser.speciality}} </td>
+    <td mat-cell *matCellDef="let forceUser"> {{forceUser.specialityDescription}} </td>
   </ng-container>
 
   <ng-container matColumnDef="LightSaberColor">
     <th mat-header-cell *matHeaderCellDef> Light Saber Color </th>
-    <td mat-cell *matCellDef="let forceUser"> {{forceUser.lightSaberColor}} </td>
+    <td mat-cell *matCellDef="let forceUser"> {{forceUser.lightSaberColorDescription}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Icon">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let forceUser">
+      <fa-icon *ngIf="forceUser.side === 1"
+      [icon]="faJediOrder" size="lg" [styles]="{'color': 'green'}"></fa-icon>
+      <fa-icon *ngIf="forceUser.side === 2"
+      [icon]="faGalacticRepublic" size="lg" [styles]="{'color': 'red'}"></fa-icon>
+    </td>
   </ng-container>
 
 

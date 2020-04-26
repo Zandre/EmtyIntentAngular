@@ -7,6 +7,6 @@
 export enum LightSaberColor {
 	Green = 1,
 	Blue = 2,
-	Red = 2,
+	Red = 3,
 	Purple = 4,
 }
