@@ -55,17 +55,30 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "AngularFrontEnd:build"
+            "browserTarget": "AngularFrontEnd:build",
+            "hmrWarning": false
           },
           "configurations": {
             "production": {
               "browserTarget": "AngularFrontEnd:build:production"
+            },
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "AngularFrontEnd:build:hmr"
             }
           }
         },

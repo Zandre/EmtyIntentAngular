@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  api_basepath: ''
+  api_basepath: '',
+  hmr: false
 };
