@@ -33,7 +33,7 @@ import { GlobalErrorHandler } from '../shared/error-handler/error-handler';
 
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot({
-      timeOut: 10000,
+      timeOut: 5000,
       progressBar: true,
       preventDuplicates: true,
     }),
