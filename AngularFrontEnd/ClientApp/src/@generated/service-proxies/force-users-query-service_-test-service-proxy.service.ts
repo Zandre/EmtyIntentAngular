@@ -32,6 +32,6 @@ export class ForceUsersQueryService_TestServiceProxyService {
 
     causeCSharpError(): Observable<void> {
         const url = this.apiBasePath + 'api/forceUsersQueryService_TestService/causeCSharpError';
-        return this.http.post<void>(url, null);
+        return this.http.post<void>(url, null, { headers: new HttpHeaders()});
     }
 }
