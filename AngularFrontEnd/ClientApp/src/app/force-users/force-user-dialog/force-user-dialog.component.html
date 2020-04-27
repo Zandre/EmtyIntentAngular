@@ -1,13 +1,52 @@
 <span class="h2" mat-dialog-title>Force User</span>
 <mat-dialog-content>
-<p>some content</p>
+  <form name="forceUserFormGroup" id="form" [formGroup]="this.forceUserFormGroup" fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="1em">
+
+      <mat-form-field fxFlex="50%">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+        <mat-error>
+            {{ this.forceUserFormGroup.controls.name.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50%">
+        <mat-select placeholder="Side" formControlName="side">
+          <mat-option *ngFor="let side of sides$ | async" [value]="side.value">{{side.description}}</mat-option>
+        </mat-select>
+        <mat-error>
+          {{ this.forceUserFormGroup.controls.side.errorMessage }}
+      </mat-error>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="1em">
+      <mat-form-field fxFlex="50%">
+        <mat-select placeholder="Speciality" formControlName="speciality">
+          <mat-option *ngFor="let speciality of specialities$ | async" [value]="speciality.value">{{speciality.description}}</mat-option>
+        </mat-select>
+        <mat-error>
+          {{ this.forceUserFormGroup.controls.speciality.errorMessage }}
+      </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="50%">
+        <mat-select placeholder="Light Saber color" formControlName="lightSaberColor">
+          <mat-option *ngFor="let lightSaberColor of lightSaberColors$ | async" [value]="lightSaberColor.value">{{lightSaberColor.description}}</mat-option>
+        </mat-select>
+        <mat-error>
+          {{ this.forceUserFormGroup.controls.lightSaberColor.errorMessage }}
+      </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
 </mat-dialog-content>
 <mat-dialog-actions>
   <div fxFill fxLayout="row" fxLayoutAlign="end center">
-    <button mat-raised-button>
+    <button mat-raised-button (click)="close()">
       <fa-icon [icon]="faTimes"></fa-icon>Cancel
     </button>
-    <button type="button" mat-raised-button color="primary" form="form">
+    <button type="button" mat-raised-button color="primary" form="form" (click)="save()">
       <fa-icon [icon]="faCheck"></fa-icon>Save
     </button>
 </div>

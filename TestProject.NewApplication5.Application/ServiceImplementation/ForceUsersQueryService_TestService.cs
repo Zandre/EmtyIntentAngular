@@ -28,14 +28,14 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task<List<DTOs.ForceUserQueryService_TestService.ForceUser>> GetForceUsers()
+        public async Task<List<ForceUser>> GetForceUsers()
         {
             var forceUsers = await _forceUsersRepository.FindAllAsync();
             return forceUsers.Select(forceUser => ForceUser.Create(
-                id: forceUser.Id, 
-                side: forceUser.Side, 
+                id: forceUser.Id,
+                side: forceUser.Side,
                 speciality: forceUser.Speciality,
-                lightSaberColor: forceUser.LightSaberColor, 
+                lightSaberColor: forceUser.LightSaberColor,
                 name: forceUser.Name))
                 .ToList();
         }

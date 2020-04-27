@@ -8,6 +8,9 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 import { FontAwesomeModule, FaConfig } from '@fortawesome/angular-fontawesome';
 
@@ -26,6 +29,9 @@ import { ForceUserDialogComponent } from './force-user-dialog/force-user-dialog.
     MatTableModule,
     MatButtonModule,
     MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
 
     FontAwesomeModule,
 

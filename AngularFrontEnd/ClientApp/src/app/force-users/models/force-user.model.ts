@@ -29,9 +29,17 @@ export class ForceUserModel implements ForceUser {
   @required()
   name: string;
 
-  sideDescription: string;
-  specialityDescription: string;
-  lightSaberColorDescription: string;
+  get sideDescription(): string  {
+    return SideList.getDescription(this.side);
+  }
+
+  get specialityDescription(): string {
+    return SpecialityList.getDescription(this.speciality);
+  }
+
+  get lightSaberColorDescription(): string {
+    return LightSaberColorList.getDescription(this.lightSaberColor);
+  }
 
   static createFromDto(forceUser: ForceUser): ForceUserModel {
     const model = new ForceUserModel();
@@ -41,10 +49,6 @@ export class ForceUserModel implements ForceUser {
     model.speciality = forceUser.speciality;
     model.lightSaberColor = forceUser.lightSaberColor;
     model.name = forceUser.name;
-
-    model.sideDescription = SideList.getDescription(forceUser.side);
-    model.specialityDescription = SpecialityList.getDescription(forceUser.speciality);
-    model.lightSaberColorDescription = LightSaberColorList.getDescription(forceUser.lightSaberColor);
 
     return model;
   }

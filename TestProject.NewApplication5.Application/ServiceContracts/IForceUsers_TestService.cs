@@ -12,7 +12,7 @@ namespace TestProject.NewApplication5.Application
     public interface IForceUsers_TestService : IDisposable
     {
 
-        Task CreateForceUser(DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto);
+        Task<Guid> CreateForceUser(DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto);
 
         Task UpdateForceUser(DTOs.ForceUsers_TestService.UpdateForceUser updateForceUserDto);
 

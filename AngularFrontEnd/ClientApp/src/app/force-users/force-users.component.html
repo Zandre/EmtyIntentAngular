@@ -34,10 +34,10 @@
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="row-item" (click)="openDialog(row)"></tr>
   </table>
   <div style="padding-top: 1em" fxFlex="100%" fxLayout="row" fxLayoutAlign="end center">
-    <button mat-raised-button color="primary" (click)="openDialog()">
+    <button mat-raised-button color="primary" (click)="openDialog(null)">
       <fa-icon [icon]="faPlus"></fa-icon>Force user
     </button>
   </div>

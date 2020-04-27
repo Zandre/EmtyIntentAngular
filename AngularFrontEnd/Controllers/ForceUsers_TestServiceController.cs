@@ -34,16 +34,18 @@ namespace AngularFrontEnd.Controllers
 
         [HttpPost("createforceuser")]
         [Authorize]
-        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(Guid), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> CreateForceUser([FromBody]TestProject.NewApplication5.Application.DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto)
         {
+            Guid result = default(Guid);
             var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
 
             try
             {
                 using (TransactionScope ts = new TransactionScope(TransactionScopeOption.Required, tso, TransactionScopeAsyncFlowOption.Enabled))
                 {
-                    await _appService.CreateForceUser(createForceUserDto);
+                    var appServiceResult = await _appService.CreateForceUser(createForceUserDto);
+                    result = appServiceResult;
 
                     await _dbContext.SaveChangesAsync();
                     ts.Complete();
@@ -54,7 +56,7 @@ namespace AngularFrontEnd.Controllers
                 return StatusCode(500, e);
             }
 
-            return Ok();
+            return Ok(result);
 
         }
 

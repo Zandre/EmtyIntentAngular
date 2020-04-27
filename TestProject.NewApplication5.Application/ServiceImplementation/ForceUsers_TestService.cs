@@ -26,7 +26,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task CreateForceUser(DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto)
+        public async Task<Guid> CreateForceUser(DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto)
         {
             var forceUser = ForceUsers.Create(name: createForceUserDto.Name,
                 side: createForceUserDto.Side,
@@ -34,6 +34,8 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
                 lightSaberColor: createForceUserDto.LightSaberColor);
 
             _forceUsersRepository.Add(forceUser);
+
+            return forceUser.Id;
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
