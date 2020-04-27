@@ -1,3 +1,5 @@
+import { prop, required } from '@rxweb/reactive-form-validators';
+
 import { ForceUser } from 'src/@generated/dtos/force-user';
 import { Side } from 'src/@generated/enums/side-enum';
 import { Speciality } from 'src/@generated/enums/speciality-enum';
@@ -8,10 +10,23 @@ import { LightSaberColorList } from 'src/@generated/enum_lists/light-saber-color
 
 export class ForceUserModel implements ForceUser {
 
+  @prop()
   id: string;
+
+  @prop()
+  @required()
   side: Side;
+
+  @prop()
+  @required()
   speciality: Speciality;
+
+  @prop()
+  @required()
   lightSaberColor: LightSaberColor;
+
+  @prop()
+  @required()
   name: string;
 
   sideDescription: string;
@@ -32,6 +47,10 @@ export class ForceUserModel implements ForceUser {
     model.lightSaberColorDescription = LightSaberColorList.getDescription(forceUser.lightSaberColor);
 
     return model;
+  }
+
+  static createEmpty(): ForceUserModel {
+    return new ForceUserModel();
   }
 
 }

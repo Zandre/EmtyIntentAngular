@@ -1,3 +1,14 @@
-<p>
-  force-user-dialog works!
-</p>
+<span class="h2" mat-dialog-title>Force User</span>
+<mat-dialog-content>
+<p>some content</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <div fxFill fxLayout="row" fxLayoutAlign="end center">
+    <button mat-raised-button>
+      <fa-icon [icon]="faTimes"></fa-icon>Cancel
+    </button>
+    <button type="button" mat-raised-button color="primary" form="form">
+      <fa-icon [icon]="faCheck"></fa-icon>Save
+    </button>
+</div>
+</mat-dialog-actions>

@@ -39,7 +39,7 @@ export class ForceUsersComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ForceUserDialogComponent, {
-      width: '500px',
+      width: '800px',
       data: null
     });
 
