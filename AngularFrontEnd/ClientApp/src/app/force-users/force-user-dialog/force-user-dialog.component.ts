@@ -12,7 +12,8 @@ import { SideList } from 'src/@generated/enum_lists/side-list';
 import { SpecialityList } from 'src/@generated/enum_lists/speciality-list';
 import { LightSaberColorList } from 'src/@generated/enum_lists/light-saber-color-list';
 import { ForceUsers_TestServiceProxyService } from 'src/@generated/service-proxies/force-users_-test-service-proxy.service';
-import { CreateForceUserModel } from '../models/createForceUser.model';
+import { CreateForceUserModel } from '../models/CreateForceUserModel';
+import { UpdateForceUserModel } from '../models/UpdateForceUserModel';
 
 @Component({
   selector: 'app-force-user-dialog',
@@ -57,17 +58,18 @@ export class ForceUserDialogComponent implements OnInit {
       return;
     }
 
-    this._dialogRef.close(this.forceUserFormGroup.modelInstance)
-
-    // if(!!this.forceUserFormGroup.value.id) {
-
-    // } else {
-    //   // Create new force user
-    //   this.forceUsers_TestServiceProxyService.createForceUser(CreateForceUserModel.createFromModel(this.forceUserFormGroup.modelInstanceValue))
-    //   .subscribe((forceUserId: string) => {
-    //     this.forceUserFormGroup.controls.id.patchValue(forceUserId);
-    //     this._dialogRef.close(this.forceUserFormGroup.modelInstance)
-    //   });
-    // }
+    if(!!this.forceUserFormGroup.value.id) {
+      this.forceUsers_TestServiceProxyService.updateForceUser(UpdateForceUserModel.createFromModel(this.forceUserFormGroup.modelInstance))
+      .subscribe(() => {
+        this._dialogRef.close(this.forceUserFormGroup.modelInstance)
+      })
+    } else {
+      // Create new force user
+      this.forceUsers_TestServiceProxyService.createForceUser(CreateForceUserModel.createFromModel(this.forceUserFormGroup.modelInstance))
+      .subscribe((forceUserId: string) => {
+        this.forceUserFormGroup.controls.id.patchValue(forceUserId);
+        this._dialogRef.close(this.forceUserFormGroup.modelInstance)
+      });
+    }
   }
 }

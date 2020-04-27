@@ -26,7 +26,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task<Guid> CreateForceUser(DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto)
+        public Guid CreateForceUser(DTOs.ForceUsers_TestService.CreateForceUser createForceUserDto)
         {
             var forceUser = ForceUsers.Create(name: createForceUserDto.Name,
                 side: createForceUserDto.Side,

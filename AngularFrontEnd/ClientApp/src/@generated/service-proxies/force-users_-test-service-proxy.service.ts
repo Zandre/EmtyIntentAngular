@@ -27,17 +27,41 @@ export class ForceUsers_TestServiceProxyService {
     }
 
     createForceUser(createForceUserDto: CreateForceUser): Observable<string> {
+
+        const httpOptions = {
+          headers: new HttpHeaders({
+              'Content-Type':  'application/json',
+              'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
+          })
+      };
+
         const url = this.apiBasePath + 'api/forceUsers_TestService/createForceUser';
-        return this.http.post<string>(url, { createForceUserDto });
+        return this.http.post<string>(url, createForceUserDto, httpOptions);
     }
 
     updateForceUser(updateForceUserDto: UpdateForceUser): Observable<void> {
+
+      const httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type':  'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
+        })
+    };
+
         const url = this.apiBasePath + 'api/forceUsers_TestService/updateForceUser';
-        return this.http.post<void>(url, { updateForceUserDto });
+        return this.http.post<void>(url, updateForceUserDto, httpOptions);
     }
 
     deleteForceUser(id: string): Observable<void> {
+
+      const httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type':  'application/json',
+            'Authorization': `Bearer ${localStorage.getItem('auth_token')}`
+        })
+    };
+
         const url = this.apiBasePath + 'api/forceUsers_TestService/deleteForceUser';
-        return this.http.post<void>(url, { id });
+        return this.http.post<void>(url, id, httpOptions);
     }
 }
