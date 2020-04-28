@@ -1,14 +1,43 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-6 new-user-alert">
       <div *ngIf="brandNew" class="alert alert-success" role="alert">
           <strong>All set!</strong> Please login with your account
       </div>
       <h2>Login</h2>
   </div>
-</div>
+</div> -->
 
-<div class="row">
-  <div class="col-md-6">
+<div fxLayout="column" fxLayoutAlign="space-around center">
+  <form name="loginForm" id="form" [formGroup]="this.loginFormGroup"
+  fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap="1em"
+  class="mat-elevation-z8" style="padding-left: 2em; padding-right: 2em; padding-top: 4em; padding-bottom: 4em; margin: 5em;">
+    <fa-icon [icon]="faUser" size="6x"></fa-icon>
+    <h2>Login</h2>
+    <div fxLayout="row" fxLayoutGap="1em">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="johndoe@gmail.com" type="email">
+        <mat-error>
+            {{ this.loginFormGroup.controls.email.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-error>
+            {{ this.loginFormGroup.controls.password.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutGap="1em" fxLayoutAlign="center center">
+      <button type="button" mat-raised-button color="primary" form="form">
+        <fa-icon [icon]="faSignInAlt"></fa-icon> Login
+      </button>
+    </div>
+
+  </form>
+  <!-- <div class="col-md-6">
       <form #f="ngForm" novalidate (ngSubmit)="login(f)">
 
           <div class="form-group">
@@ -31,7 +60,7 @@
             </div>
 
         </form>
-   </div>
+   </div> -->
 </div>
 
 
