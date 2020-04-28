@@ -49,7 +49,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
     if (valid) {
       this.accountProxyService.login(value.email, value.password).subscribe((jwt: string) => {
         this.accountService.successfullLogin(jwt);
-        this.router.navigate(['/dashboard/home']);
+        this.router.navigate(['/force-users']);
       }, error => this.errors = error);
     }
   }
