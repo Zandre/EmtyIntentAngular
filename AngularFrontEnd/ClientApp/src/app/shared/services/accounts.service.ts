@@ -17,7 +17,10 @@ export class AccountService extends BaseService {
 
   constructor() {
     super();
-    this.loggedIn = !!localStorage.getItem('auth_token');
+
+    // ZB: I want the user always to start with being locked out
+    //this.loggedIn = !!localStorage.getItem('auth_token');
+
     this._authNavStatusSource.next(this.loggedIn);
   }
 
