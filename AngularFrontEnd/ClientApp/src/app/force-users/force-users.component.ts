@@ -25,6 +25,7 @@ export class ForceUsersComponent implements OnInit, OnDestroy {
   displayedColumns: string[] = ['Name', 'Side', 'Speciality', 'LightSaberColor', 'Icon'];
 
   forceUsers: ForceUserModel[] = [];
+
   faJediOrder = faJediOrder;
   faGalacticRepublic = faGalacticRepublic;
   faPlus = faPlus;

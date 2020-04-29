@@ -1,5 +1,10 @@
 <div fxLayout="column">
-  <h1>Force Users</h1>
+  <div fxLayout="row" fxLayoutAlign="space-between center" class="top-section">
+    <h1>Force Users</h1>
+    <button mat-raised-button color="primary" (click)="openDialog(null)">
+      <fa-icon [icon]="faPlus"></fa-icon>Force user
+    </button>
+  </div>
   <table fxFill mat-table [dataSource]="this.forceUsers" class="mat-elevation-z8" #forceUserTable>
 
     <ng-container matColumnDef="Name">
@@ -32,15 +37,9 @@
       </td>
     </ng-container>
 
-
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;" matRipple class="row-item" (click)="openDialog(row)"></tr>
   </table>
-  <div style="padding-top: 1em" fxFlex="100%" fxLayout="row" fxLayoutAlign="end center">
-    <button mat-raised-button color="primary" (click)="openDialog(null)">
-      <fa-icon [icon]="faPlus"></fa-icon>Force user
-    </button>
-  </div>
 </div>
 
 

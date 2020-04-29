@@ -36,12 +36,16 @@
         </mat-error>
       </mat-form-field>
     </div>
-    <button type="button" mat-raised-button color="primary" form="form" (click)="registerUser()">
+    <button *ngIf="!isRequesting" type="button" mat-raised-button color="primary" form="form" (click)="registerUser()">
       <fa-icon [icon]="faUserPlus"></fa-icon> Register
     </button>
-
-    <div *ngIf="errors" class="alert alert-danger" role="alert">
-      <strong>Oops!</strong> {{errors}}
+    <div *ngIf="isRequesting" fxLayout="row" fxLayoutAlign="center center">
+      <fa-icon [icon]="faCircleNotch" size="2x" spin="true"></fa-icon>
     </div>
   </form>
 </div>
+
+
+    <!-- <div *ngIf="errors" class="alert alert-danger" role="alert">
+      <strong>Oops!</strong> {{errors}}
+    </div> -->

@@ -7,7 +7,7 @@ import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-pr
 import { RegistrationModel } from './models/registration.model';
 import { ToastrService } from 'ngx-toastr';
 
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
+import { faUserPlus, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-registration-form',
@@ -22,6 +22,7 @@ export class RegistrationFormComponent implements OnInit {
   submitted = false;
 
   faUserPlus = faUserPlus;
+  faCircleNotch = faCircleNotch;
 
   constructor(private router: Router,
     private accountService: AccountsProxyService,
@@ -54,7 +55,8 @@ export class RegistrationFormComponent implements OnInit {
       this.router.navigate(['/login'], {queryParams: {brandNew: true, email: this.registrationFormGroup.modelInstance.email}});
     }, errors => {
       this.toastService.warning(this.registrationFormGroup.modelInstance.email, 'Registration failed');
-      this.errors = errors
+      this.errors = errors;
+      this.isRequesting = false;
     });
  }
 }

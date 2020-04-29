@@ -1,12 +1,3 @@
-<!-- <div class="row">
-  <div class="col-md-6 new-user-alert">
-      <div *ngIf="brandNew" class="alert alert-success" role="alert">
-          <strong>All set!</strong> Please login with your account
-      </div>
-      <h2>Login</h2>
-  </div>
-</div> -->
-
 <div fxLayout="column" fxLayoutAlign="space-around center">
   <form name="loginForm" id="form" [formGroup]="this.loginFormGroup"
   fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap="1em" class="login-form mat-elevation-z8">
@@ -32,35 +23,19 @@
             {{ this.loginFormGroup.controls.password.errorMessage }}
         </mat-error>
       </mat-form-field>
-      <button type="button" mat-raised-button color="primary" form="form" (click)="login()">
+      <button *ngIf="!isRequesting" type="button" mat-raised-button color="primary" form="form" (click)="login()">
         <fa-icon [icon]="faSignInAlt"></fa-icon> Login
       </button>
+      <div *ngIf="isRequesting" fxLayout="row" fxLayoutAlign="center center">
+        <fa-icon [icon]="faCircleNotch" size="2x" spin="true"></fa-icon>
+      </div>
     </div>
   </form>
-  <!-- <div class="col-md-6">
-      <form #f="ngForm" novalidate (ngSubmit)="login(f)">
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="text" required name="email" class="form-control" placeholder="Email" [ngModel]="credentials.email" #email="ngModel" tmFocus validateEmail>
-            <small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</small>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" required name="password" placeholder="Password" ngModel>
-          </div>
-
-          <div class="form-group">
-              <button type="submit" class="btn btn-primary" [disabled]="f.invalid || isRequesting">Login</button>
-              <app-spinner [isRunning]="isRequesting"></app-spinner>
-          </div>
-
-          <div *ngIf="errors" class="alert alert-danger" role="alert">
-              <strong>Oops!</strong> {{errors}}
-            </div>
-
-        </form>
-   </div> -->
 </div>
+
+<!--
+<div *ngIf="errors" class="alert alert-danger" role="alert">
+  <strong>Oops!</strong> {{errors}}
+</div> -->
 
 
