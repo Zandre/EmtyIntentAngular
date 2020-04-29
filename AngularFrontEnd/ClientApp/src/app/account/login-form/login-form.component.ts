@@ -11,6 +11,7 @@ import { LoginModel } from './models/login.model';
 
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login-form',
@@ -35,7 +36,8 @@ export class LoginFormComponent implements OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private accountService: AccountService,
     private accountProxyService: AccountsProxyService,
-    private readonly _rxFormBuilder: RxFormBuilder,) { }
+    private readonly _rxFormBuilder: RxFormBuilder,
+    private readonly toastService: ToastrService) { }
 
   ngOnInit() {
 
@@ -72,9 +74,13 @@ export class LoginFormComponent implements OnInit, OnDestroy {
 
     this.accountProxyService.login(this.loginFormGroup.modelInstance.email, this.loginFormGroup.modelInstance.password)
     .subscribe((jwt: string) => {
+
+      this.toastService.success(this.loginFormGroup.modelInstance.email, 'Succesfull login');
       this.accountService.successfullLogin(jwt);
       this.router.navigate(['/force-users']);
-    }, error => this.errors = error);
-
+    }, error => {
+      this.toastService.warning(this.loginFormGroup.modelInstance.email, 'Login attempt failed');
+      this.errors = error
+    });
   }
 }

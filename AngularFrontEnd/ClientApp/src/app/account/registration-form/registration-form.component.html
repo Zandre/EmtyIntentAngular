@@ -1,41 +1,47 @@
-<div class="row">
-  <div class="col-md-6">
-    <h2>Please enter your information</h2>
-  </div>
+<div fxLayout="column" fxLayoutAlign="space-around center">
+  <form name="registrationForm" id="form" [formGroup]="this.registrationFormGroup"
+  fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap="1em" class="registration-form mat-elevation-z8">
+
+    <fa-icon [icon]="faUserPlus" size="6x"></fa-icon>
+    <h2>Register</h2>
+    <div fxLayout="row" fxLayoutGap="1em" class="wide-field">
+      <mat-form-field fxFlex="50%">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="John">
+        <mat-error>
+            {{ this.registrationFormGroup.controls.firstName.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field fxFlex="50%">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Doe">
+        <mat-error>
+            {{ this.registrationFormGroup.controls.lastName.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayoutGap="1em" class="wide-field">
+      <mat-form-field fxFlex="50%">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="johnd@example.com">
+        <mat-error>
+            {{ this.registrationFormGroup.controls.email.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field fxFlex="50%">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+        <mat-error>
+            {{ this.registrationFormGroup.controls.password.errorMessage }}
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <button type="button" mat-raised-button color="primary" form="form" (click)="registerUser()">
+      <fa-icon [icon]="faUserPlus"></fa-icon> Register
+    </button>
+
+    <div *ngIf="errors" class="alert alert-danger" role="alert">
+      <strong>Oops!</strong> {{errors}}
+    </div>
+  </form>
 </div>
-
-<div class="row">
-  <div class="col-md-6">
-      <form #f="ngForm" novalidate (ngSubmit)="registerUser(f)">
-          <div class="form-group">
-              <label for="first-name">First name</label>
-              <input type="text" class="form-control" id="first-name" placeholder="First name" name="firstName" tmFocus ngModel>
-          </div>
-          <div class="form-group">
-              <label for="last-name">Last name</label>
-              <input type="text" class="form-control" id="last-name" placeholder="Last name" name="lastName" ngModel>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-          	<input id="email" type="text" required name="email" validateEmail class="form-control" placeholder="Email" ngModel  #email="ngModel">
-            <small [hidden]="email.valid || (email.pristine && !submitted)" class="text-danger">Please enter a valid email</small>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Password" ngModel>
-          </div>
-
-          <div class="form-group">
-              <button type="submit" class="btn btn-primary" [disabled]="f.invalid || isRequesting">Sign Up</button>
-              <app-spinner [isRunning]="isRequesting"></app-spinner>
-          </div>
-
-          <div *ngIf="errors" class="alert alert-danger" role="alert">
-              <strong>Oops!</strong> {{errors}}
-            </div>
-
-        </form>
-   </div>
-</div>
-
-
