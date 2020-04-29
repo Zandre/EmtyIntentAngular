@@ -11,7 +11,7 @@ import { ForceUserModel } from './models/force-user.model';
 import { ForceUserDialogComponent } from './force-user-dialog/force-user-dialog.component';
 
 import { faJediOrder, faGalacticRepublic } from '@fortawesome/free-brands-svg-icons';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-force-users',
@@ -26,9 +26,12 @@ export class ForceUsersComponent implements OnInit, OnDestroy {
 
   forceUsers: ForceUserModel[] = [];
 
+  isRequesting = true;
+
   faJediOrder = faJediOrder;
   faGalacticRepublic = faGalacticRepublic;
   faPlus = faPlus;
+  faCircleNotch = faCircleNotch;
 
   private _unsubscribeAll = new Subject<any>();
 
@@ -40,6 +43,7 @@ export class ForceUsersComponent implements OnInit, OnDestroy {
     .subscribe((_forceUsers: ForceUser[]) => {
       this.forceUsers = _forceUsers.map(x => ForceUserModel.createFromDto(x));
       this.forceUserTable.renderRows();
+      this.isRequesting = false;
     });
   }
 
