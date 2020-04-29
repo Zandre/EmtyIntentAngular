@@ -5,7 +5,6 @@ import { IFormGroup, RxFormBuilder } from '@rxweb/reactive-form-validators';
 
 import { Subscription } from 'rxjs';
 
-import { Credentials } from 'src/app/shared/model/credentials.interface';
 import { AccountService } from 'src/app/shared/services/accounts.service';
 import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-proxy.service';
 import { LoginModel } from './models/login.model';
@@ -31,7 +30,6 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   errors: string;
   isRequesting: boolean;
   submitted = false;
-  credentials: Credentials = { email: '', password: '' };
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -46,29 +44,37 @@ export class LoginFormComponent implements OnInit, OnDestroy {
     const model = LoginModel.createEmpty();
     this.loginFormGroup.patchModelValue(model);
 
+    //subscribe to router event
+    this.subscription = this.activatedRoute.queryParams.subscribe(
+      (param: any) => {
 
-    // subscribe to router event
-    // this.subscription = this.activatedRoute.queryParams.subscribe(
-    //   (param: any) => {
-    //      this.brandNew = param['brandNew'];
-    //      this.credentials.email = param['email'];
-    //   });
+        this.brandNew = param['brandNew'];
+
+        const model = LoginModel.create(param['email'])
+        this.loginFormGroup.patchModelValue(model);
+      });
   }
 
   ngOnDestroy(): void {
     // prevent memory leak by unsubscribing
-    //this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
-  login({ value, valid }: { value: Credentials, valid: boolean }) {
+  login(): void {
+
+    if (this.loginFormGroup.invalid) {
+      return;
+    }
+
     this.submitted = true;
     this.isRequesting = true;
     this.errors = '';
-    if (valid) {
-      this.accountProxyService.login(value.email, value.password).subscribe((jwt: string) => {
-        this.accountService.successfullLogin(jwt);
-        this.router.navigate(['/force-users']);
-      }, error => this.errors = error);
-    }
+
+    this.accountProxyService.login(this.loginFormGroup.modelInstance.email, this.loginFormGroup.modelInstance.password)
+    .subscribe((jwt: string) => {
+      this.accountService.successfullLogin(jwt);
+      this.router.navigate(['/force-users']);
+    }, error => this.errors = error);
+
   }
 }
