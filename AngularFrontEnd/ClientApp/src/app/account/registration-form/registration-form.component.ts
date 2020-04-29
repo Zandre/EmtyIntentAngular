@@ -7,7 +7,7 @@ import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-pr
 import { RegistrationModel } from './models/registration.model';
 import { ToastrService } from 'ngx-toastr';
 
-import { faUserPlus, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faUserPlus, faCircleNotch, faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-registration-form',
@@ -23,6 +23,7 @@ export class RegistrationFormComponent implements OnInit {
 
   faUserPlus = faUserPlus;
   faCircleNotch = faCircleNotch;
+  faExclamationTriangle = faExclamationTriangle;
 
   constructor(private router: Router,
     private accountService: AccountsProxyService,

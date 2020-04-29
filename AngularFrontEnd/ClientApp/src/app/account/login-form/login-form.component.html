@@ -1,13 +1,18 @@
 <div fxLayout="column" fxLayoutAlign="space-around center">
+
   <form name="loginForm" id="form" [formGroup]="this.loginFormGroup"
-  fxLayout="column" fxLayoutAlign="center center"  fxLayoutGap="1em" class="login-form mat-elevation-z8">
-  <div class="wide-field">
-    <div *ngIf="brandNew" class="alert alert-success" role="alert">
-        <strong>All set!</strong> Please login with your account
+  fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1em" class="login-form mat-elevation-z8">
+
+    <div class="wide-field">
+      <div *ngIf="brandNew" class="alert alert-success" role="alert">
+          <strong>All set!</strong> Please login with your account
+      </div>
     </div>
-</div>
+
     <fa-icon [icon]="faUser" size="6x"></fa-icon>
+
     <h2>Login</h2>
+
     <div fxLayout="column" class="wide-field">
       <mat-form-field>
         <mat-label>Email</mat-label>
@@ -30,12 +35,15 @@
         <fa-icon [icon]="faCircleNotch" size="2x" spin="true"></fa-icon>
       </div>
     </div>
+
   </form>
+
 </div>
 
-<!--
-<div *ngIf="errors" class="alert alert-danger" role="alert">
-  <strong>Oops!</strong> {{errors}}
-</div> -->
-
+<div  fxLayout="column" fxLayoutAlign="center center" *ngIf="errors">
+  <h5 class="text-danger">
+    <fa-icon [icon]="faExclamationTriangle"></fa-icon> Oops, seems like something went wrong
+  </h5>
+  <pre class="alert alert-danger mat-elevation-z8" role="alert">{{errors | json}}</pre>
+</div>
 

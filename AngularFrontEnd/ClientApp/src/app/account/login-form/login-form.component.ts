@@ -10,7 +10,7 @@ import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-pr
 import { LoginModel } from './models/login.model';
 
 import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { faSignInAlt, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
+import { faSignInAlt, faCircleNotch, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -25,6 +25,7 @@ export class LoginFormComponent implements OnInit, OnDestroy {
   faUser = faUser;
   faSignInAlt = faSignInAlt;
   faCircleNotch = faCircleNotch;
+  faExclamationTriangle = faExclamationTriangle;
 
   loginFormGroup: IFormGroup<LoginModel>;
 
