@@ -31,6 +31,9 @@ Toast messages used in the project can be found [here](https://www.npmjs.com/pac
 ## Typescript error handling
 Implemented global error handling for typescript errors by following [this post](https://medium.com/@amcdnl/global-error-handling-with-angular2-6b992bdfb59c) and installing [stacktrace-js](https://www.npmjs.com/package/stacktrace-js)
 
+## Typesafe forms
+Installation [here](https://www.npmjs.com/package/@rxweb/reactive-form-validators)
+
 ## ng version
 
 ```
