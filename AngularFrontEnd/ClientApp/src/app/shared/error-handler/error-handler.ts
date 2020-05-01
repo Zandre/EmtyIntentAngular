@@ -29,11 +29,11 @@ export class GlobalErrorHandler implements ErrorHandler {
 
      let messageForUser = 'Message: ' + message;
 
-     if(url) {
+     if (url) {
        messageForUser = messageForUser + '\nURL: ' + url;
      }
 
-     if(stackString) {
+     if (stackString) {
        messageForUser = messageForUser + '\nStack trace: ' + stackString;
      }
      this.toastrService.error(messageForUser, 'Error', { timeOut: 3000, progressBar: true });

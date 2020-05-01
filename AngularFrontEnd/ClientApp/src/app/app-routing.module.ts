@@ -280,6 +280,10 @@ const routes: Routes = [
         path: '',
         component: Layout2Component,
         children: [
+              {
+                path: 'account/login',
+                loadChildren: () => import('./account/login/login.module').then(m => m.LoginModule)
+            },
             {
                 path: 'sample-pages/login',
                 loadChildren: () => import('./pages/sample-pages/login/login.module').then(m => m.LoginModule)

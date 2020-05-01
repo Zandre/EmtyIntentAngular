@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ToastrModule } from 'ngx-toastr';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -25,8 +26,6 @@ import { LogoComponent } from './layout/header/logo/logo.component';
 import { UserComponent } from './layout/sidebar/user/user.component';
 import { PageLoaderComponent } from './layout/page-loader/page-loader.component';
 import { NavigationTriggerComponent } from './layout/header/navigation-trigger/navigation-trigger.component';
-
-
 
 @NgModule({
    declarations: [
@@ -53,6 +52,12 @@ import { NavigationTriggerComponent } from './layout/header/navigation-trigger/n
     ForceUsersModule,
     HttpClientModule,
     FontAwesomeModule,
+
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      progressBar: true,
+      preventDuplicates: true,
+    }),
    ],
    providers: [
     AppService
