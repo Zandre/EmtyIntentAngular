@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="12ebdcc8-0ab7-4ba4-966e-f912b33e4ab7" type="DTO">
+  <name>UserLoginDto</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>a11a626a-2c76-4ec3-98b1-5f031259a1ed</parentFolderId>
+  <literals />
+  <attributes>
+    <attribute id="726600d6-d564-4c58-9de8-3e61b6c3bf44" type="DTO-Field">
+      <name>email</name>
+      <typeReference id="219c2717-29bf-4791-93b5-8adb942eb66f">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="6e9a2380-c73d-40aa-a215-3036b4483cb0" type="DTO-Field">
+      <name>name</name>
+      <typeReference id="4a6e098a-70d3-40bd-be10-0c146467b348">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+    <attribute id="2647c9a7-9323-445f-a774-2d49985f4964" type="DTO-Field">
+      <name>jwt</name>
+      <typeReference id="481466b5-7df4-40d8-b25d-80e71fb4664d">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <stereotypes />
+    </attribute>
+  </attributes>
+  <operations />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
+  </stereotypes>
+  <childElements />
+</class>

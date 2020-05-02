@@ -1,44 +1,42 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subject, Observable } from 'rxjs';
 
 import {BaseService} from "./base.service";
-import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { UserLogin } from './account-models/user-login.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 
 export class AccountService extends BaseService {
 
-  baseUrl: string = '';
-
-  private _authNavStatusSource = new BehaviorSubject<boolean>(false);
-  authNavStatus$ = this._authNavStatusSource.asObservable();
-
-  private loggedIn = false;
+  private userLoginSubject = new Subject<UserLogin>();
+  private userLogin: UserLogin = UserLogin.createEmpty();
 
   constructor() {
     super();
-
-    // ZB: I want the user always to start with being locked out
-    //this.loggedIn = !!localStorage.getItem('auth_token');
-
-    this._authNavStatusSource.next(this.loggedIn);
+    this.userLoginSubject.next(this.userLogin);
   }
 
-  successfullLogin(jwt: string) {
+  successfullLogin(jwt: string, email: string, name: string) {
     const jwtObj: any = jwt;
     localStorage.setItem('auth_token', jwtObj.auth_token);
-    this.loggedIn = true;
-    this._authNavStatusSource.next(true);
+    this.userLogin = UserLogin.create(name, email, true);
+    this.userLoginSubject.next(this.userLogin);
   }
 
   logout() {
     localStorage.removeItem('auth_token');
-    this.loggedIn = false;
-    this._authNavStatusSource.next(false);
+    this.userLogin = UserLogin.create('', '', false);
+    this.userLoginSubject.next(this.userLogin);
   }
 
-  isLoggedIn() {
-    return this.loggedIn;
+  currentUserLogin(): UserLogin {
+    return this.userLogin;
+  }
+
+  getCurrentUserLogin(): Observable<UserLogin> {
+    return this.userLoginSubject.asObservable();
   }
 }
 

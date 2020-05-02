@@ -42,8 +42,7 @@ import { FontAwesomeModule, FaConfig } from '@fortawesome/angular-fontawesome';
     RegistrationFormComponent,
     LoginFormComponent,
     EmailValidator
-  ],
-  providers: [ AccountService ]
+  ]
 })
 export class AccountModule {
   constructor(faConfig: FaConfig) {

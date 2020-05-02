@@ -75,7 +75,7 @@
       <name>Login</name>
       <isMapped>false</isMapped>
       <returnType id="ec09f171-60bc-4d1d-8833-908d5e307828">
-        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <typeId>12ebdcc8-0ab7-4ba4-966e-f912b33e4ab7</typeId>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />

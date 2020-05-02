@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
+import { UserLoginDto } from './../dtos/user-login-dto';
+
 //     ____      __             __     ______                           __           __
 //    /  _/___  / /____  ____  / /_   / ____/__  ____  ___  _________ _/ /____  ____/ /
 //    / // __ \/ __/ _ \/ __ \/ __/  / / __/ _ \/ __ \/ _ \/ ___/ __ `/ __/ _ \/ __  /
@@ -28,8 +30,8 @@ export class AccountsProxyService {
 				return this.http.get<void>(url, { params: new HttpParams().set('firstName', firstName).set('lastName', lastName).set('email', email).set('password', password) , headers: new HttpHeaders() });
 		    }
 
-    login(userName: string, password: string): Observable<string> {
+    login(userName: string, password: string): Observable<UserLoginDto> {
         const url = this.apiBasePath + 'api/accounts/login';
-				return this.http.get<string>(url, { params: new HttpParams().set('userName', userName).set('password', password) , headers: new HttpHeaders() });
+				return this.http.get<UserLoginDto>(url, { params: new HttpParams().set('userName', userName).set('password', password) , headers: new HttpHeaders() });
 		    }
 }

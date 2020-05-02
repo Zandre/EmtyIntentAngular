@@ -25,9 +25,7 @@ const LOGIN_ROUTE = [{path: '', component: LoginComponent}];
         ReactiveFormsModule,
         RxReactiveFormsModule,
     ],
-    providers: [
-      AccountService
-    ]
+    providers: []
 })
 export class LoginModule {
 }

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using TestProject.NewApplication5.Application;
 using TestProject.NewApplication5.Application.Auth;
+using TestProject.NewApplication5.Application.DTOs.Accounts;
 using TestProject.NewApplication5.Application.Helpers;
 using TestProject.NewApplication5.Infrastructure.Data.DbContext;
 
@@ -53,7 +54,7 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
         }
 
         [IntentManaged(Mode.Merge, Body = Mode.Ignore, Signature = Mode.Fully)]
-        public async Task<string> Login(string userName, string password)
+        public async Task<DTOs.Accounts.UserLoginDto> Login(string userName, string password)
         {
             var claimsIdentity = await GetClaimsIdentity(userName, password);
             if (claimsIdentity == null)
@@ -66,7 +67,10 @@ namespace TestProject.NewApplication5.Application.ServiceImplementation
                 jwtOptions: _jwtOptions,
                 serializerSettings: new JsonSerializerSettings { Formatting = Formatting.Indented });
 
-            return jwt;
+            // ZB this is silly but will work for now
+            var user = await _userManager.FindByNameAsync(userName);
+
+            return UserLoginDto.Create(email: user.Email, name: $"{user.FirstName} {user.LastName}", jwt: jwt);
         }
 
         private async Task<ClaimsIdentity> GetClaimsIdentity(string userName, string password)

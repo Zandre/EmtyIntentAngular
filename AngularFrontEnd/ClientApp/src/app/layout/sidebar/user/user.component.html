@@ -1,13 +1,23 @@
-<div class="user">
+<div *ngIf="userLogin.loggedIn" class="user">
     <div class="user__info" (click)="userMenu = !userMenu" [class.active]="userMenu">
-        <img class="user__img" src="./assets/demo/img/profile-pics/8.jpg" alt="">
-        <div class="user__name">Malinda Hollaway</div>
-        <div class="user__email">malinda-h@gmail.com</div>
+        <div class="user__img">
+          <fa-icon [icon]="faUser" size="3x"></fa-icon>
+        </div>
+
+        <div class="user__name">{{ this.userLogin.name }}</div>
+        <div class="user__email">{{ this.userLogin.email }}</div>
     </div>
 
     <div *ngIf="userMenu" [@toggleUserMenu]="userMenu" class="user__menu">
-        <a [routerLink]="">View Profile</a>
-        <a [routerLink]="">Settings</a>
-        <a [routerLink]="">Logout</a>
+        <a (click)="logout()">Logout</a>
     </div>
+</div>
+
+<div *ngIf="!userLogin.loggedIn" class="login__block">
+  <div class="login__info" (click)="login()">
+    <div class="login__img">
+      <fa-icon [icon]="faSignInAlt" size="3x"></fa-icon>
+    </div>
+    <div class="login__text">Login</div>
+  </div>
 </div>

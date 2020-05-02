@@ -9,6 +9,7 @@ import { AccountService } from 'src/app/shared/services/accounts.service';
 
 import { LoginModel } from './models/login.model';
 import { RegistrationModel } from './models/registration.model';
+import { UserLoginDto } from 'src/@generated/dtos/user-login-dto';
 
 @Component({
     selector: 'app-login',
@@ -49,9 +50,9 @@ export class LoginComponent implements OnInit {
       }
 
       this.accountProxyService.login(this.loginFormGroup.modelInstance.email, this.loginFormGroup.modelInstance.password)
-      .subscribe((jwt: string) => {
+      .subscribe((userLoginDto: UserLoginDto) => {
         this.toastService.success(this.loginFormGroup.modelInstance.email, 'Succesfull login');
-        this.accountService.successfullLogin(jwt);
+        this.accountService.successfullLogin(userLoginDto.jwt, userLoginDto.email, userLoginDto.name);
         this.router.navigate(['/home']);
       }, error => {
         this.toastService.warning(this.loginFormGroup.modelInstance.email, 'Login attempt failed');

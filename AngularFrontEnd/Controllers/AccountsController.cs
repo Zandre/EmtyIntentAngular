@@ -60,10 +60,10 @@ namespace AngularFrontEnd.Controllers
 
         [HttpGet("login")]
         [AllowAnonymous]
-        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(TestProject.NewApplication5.Application.DTOs.Accounts.UserLoginDto), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> Login(string userName, string password)
         {
-            string result = default(string);
+            TestProject.NewApplication5.Application.DTOs.Accounts.UserLoginDto result = default(TestProject.NewApplication5.Application.DTOs.Accounts.UserLoginDto);
             var tso = new TransactionOptions { IsolationLevel = IsolationLevel.ReadCommitted };
 
             try

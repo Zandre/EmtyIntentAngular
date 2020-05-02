@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="a11a626a-2c76-4ec3-98b1-5f031259a1ed" type="Folder">
+  <name>Accounts</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>1a5ef95d-1279-477f-868f-c0fafa8a6716</parentFolderId>
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements />
+</class>
