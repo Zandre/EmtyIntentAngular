@@ -8,6 +8,7 @@ import { AccountsProxyService } from 'src/@generated/service-proxies/accounts-pr
 import { AccountService } from 'src/app/shared/services/accounts.service';
 
 import { LoginModel } from './models/login.model';
+import { RegistrationModel } from './models/registration.model';
 
 @Component({
     selector: 'app-login',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     };
 
     loginFormGroup: IFormGroup<LoginModel>;
+    registrationFormGroup: IFormGroup<RegistrationModel>;
 
     constructor(private router: Router,
       private accountService: AccountService,
@@ -32,8 +34,12 @@ export class LoginComponent implements OnInit {
 
     ngOnInit() {
       this.loginFormGroup = this._rxFormBuilder.formGroup(LoginModel) as IFormGroup<LoginModel>;
-      const model = LoginModel.createEmpty();
-      this.loginFormGroup.patchModelValue(model);
+      const loginModel = LoginModel.createEmpty();
+      this.loginFormGroup.patchModelValue(loginModel);
+
+      this.registrationFormGroup = this._rxFormBuilder.formGroup(RegistrationModel) as IFormGroup<RegistrationModel>;
+      const registrationModel = RegistrationModel.createEmpty();
+      this.registrationFormGroup.patchModelValue(registrationModel);
     }
 
     login(): void {
@@ -51,6 +57,28 @@ export class LoginComponent implements OnInit {
         this.toastService.warning(this.loginFormGroup.modelInstance.email, 'Login attempt failed');
       });
     }
+
+    registerUser() {
+
+      if (this.registrationFormGroup.invalid) {
+        return;
+      }
+
+      this.accountProxyService.createAccount(this.registrationFormGroup.modelInstance.firstName,
+        this.registrationFormGroup.modelInstance.lastName,
+        this.registrationFormGroup.modelInstance.email,
+        this.registrationFormGroup.modelInstance.password)
+      .subscribe(() => {
+        this.toastService.success(this.registrationFormGroup.modelInstance.email, 'Succesfull registration');
+
+        const loginModel = LoginModel.create(this.registrationFormGroup.modelInstance.email);
+        this.loginFormGroup.patchModelValue(loginModel);
+        this.toggleBlock('signUp', 'login');
+
+      }, errors => {
+        this.toastService.warning(this.registrationFormGroup.modelInstance.email, 'Registration failed');
+      });
+   }
 
     toggleBlock(currentBlock, nextBlock) {
       this.loginStats[currentBlock] = false;
