@@ -17,10 +17,8 @@ Repo/installation instructions can be found [here](https://github.com/angular/fl
 ## Hot module replacement
 Installation [here](https://www.npmjs.com/package/@angularclass/hmr)
 
-## Bootswatch Theme
-Chose Pulse to go along with material deep purple and amber  
-[Downloads](https://bootswatch.com/)  
-[Demo](https://bootswatch.com/pulse/)
+## Material Admin Theme
+Theme was bought [here](https://wrapbootstrap.com/theme/material-admin-responsive-admin-theme-WB011H985)
 
 ## Font Awesome
 Official Font Awesome component for Angular can be found [here](https://fontawesome.com/how-to-use/on-the-web/using-with/angular)
@@ -45,11 +43,11 @@ Installation [here](https://www.npmjs.com/package/@rxweb/reactive-form-validator
                 |___/
     
 
-Angular CLI: 9.1.3
+Angular CLI: 9.1.4
 Node: 10.15.3
 OS: win32 x64
 
-Angular: 9.1.3
+Angular: 9.1.4
 ... animations, cli, common, compiler, compiler-cli, core, forms
 ... language-service, platform-browser, platform-browser-dynamic
 ... platform-server, router
@@ -57,18 +55,18 @@ Ivy Workspace: Yes
 
 Package                           Version
 -----------------------------------------------------------
-@angular-devkit/architect         0.901.3
-@angular-devkit/build-angular     0.901.3
-@angular-devkit/build-optimizer   0.901.3
-@angular-devkit/build-webpack     0.901.3
-@angular-devkit/core              9.1.3
-@angular-devkit/schematics        9.1.3
-@angular/cdk                      9.2.1
+@angular-devkit/architect         0.901.4
+@angular-devkit/build-angular     0.901.4
+@angular-devkit/build-optimizer   0.901.4
+@angular-devkit/build-webpack     0.901.4
+@angular-devkit/core              9.1.4
+@angular-devkit/schematics        9.1.4
+@angular/cdk                      9.2.2
 @angular/flex-layout              9.0.0-beta.29
-@angular/material                 9.2.1
-@ngtools/webpack                  9.1.3
-@schematics/angular               9.1.3
-@schematics/update                0.901.3
+@angular/material                 9.2.2
+@ngtools/webpack                  9.1.4
+@schematics/angular               9.1.4
+@schematics/update                0.901.4
 rxjs                              6.5.5
 typescript                        3.8.3
 webpack                           4.42.0
