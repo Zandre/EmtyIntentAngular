@@ -70,15 +70,15 @@ export class ForceUsersComponent implements OnInit, OnDestroy {
 
     const updatedForceUser = this.forceUsers.find(f => f.id === forceUser.id);
 
-    if(!updatedForceUser) {
-      this.forceUsers.unshift(forceUser)
+    if (!updatedForceUser) {
+      this.forceUsers.unshift(forceUser);
     } else {
       updatedForceUser.name = forceUser.name;
       updatedForceUser.side = forceUser.side;
       updatedForceUser.speciality = forceUser.speciality;
-      updatedForceUser.lightSaberColor = forceUser.lightSaberColor;;
+      updatedForceUser.lightSaberColor = forceUser.lightSaberColor;
     }
-;
+
     this.forceUserTable.renderRows();
   }
 

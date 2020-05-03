@@ -58,17 +58,17 @@ export class ForceUserDialogComponent implements OnInit {
       return;
     }
 
-    if(!!this.forceUserFormGroup.value.id) {
+    if (!!this.forceUserFormGroup.value.id) {
       this.forceUsers_TestServiceProxyService.updateForceUser(UpdateForceUserModel.createFromModel(this.forceUserFormGroup.modelInstance))
       .subscribe(() => {
         this._dialogRef.close(this.forceUserFormGroup.modelInstance)
-      })
+      });
     } else {
       // Create new force user
       this.forceUsers_TestServiceProxyService.createForceUser(CreateForceUserModel.createFromModel(this.forceUserFormGroup.modelInstance))
       .subscribe((forceUserId: string) => {
         this.forceUserFormGroup.controls.id.patchValue(forceUserId);
-        this._dialogRef.close(this.forceUserFormGroup.modelInstance)
+        this._dialogRef.close(this.forceUserFormGroup.modelInstance);
       });
     }
   }

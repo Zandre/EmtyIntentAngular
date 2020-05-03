@@ -19,7 +19,7 @@ export class AccountService extends BaseService {
   }
 
   successfullLogin(jwt: string, email: string, name: string) {
-    const jwtObj: any = jwt;
+    const jwtObj = JSON.parse(jwt);
     localStorage.setItem('auth_token', jwtObj.auth_token);
     this.userLogin = UserLogin.create(name, email, true);
     this.userLoginSubject.next(this.userLogin);

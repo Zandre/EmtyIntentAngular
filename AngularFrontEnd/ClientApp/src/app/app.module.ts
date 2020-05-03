@@ -26,6 +26,7 @@ import { LogoComponent } from './layout/header/logo/logo.component';
 import { UserComponent } from './layout/sidebar/user/user.component';
 import { PageLoaderComponent } from './layout/page-loader/page-loader.component';
 import { NavigationTriggerComponent } from './layout/header/navigation-trigger/navigation-trigger.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
    declarations: [
@@ -60,7 +61,8 @@ import { NavigationTriggerComponent } from './layout/header/navigation-trigger/n
     }),
    ],
    providers: [
-    AppService
+    AppService,
+    AuthGuard
    ],
    bootstrap: [
     AppComponent

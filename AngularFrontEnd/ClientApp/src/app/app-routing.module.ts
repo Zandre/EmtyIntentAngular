@@ -2,6 +2,8 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {Layout1Component} from './layout/layouts/layout-1/layout.component';
 import {Layout2Component} from './layout/layouts/layout-2/layout.component';
+import { ForceUsersComponent } from './force-users/force-users.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
     {
@@ -17,6 +19,15 @@ const routes: Routes = [
             {
                 path: 'home',
                 loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)
+            },
+
+            {
+              // TODO: ZB
+              // Ideally this should all follow the same pattern
+              path: 'force-users',
+              component: ForceUsersComponent,
+              canActivate: [AuthGuard],
+              children: []
             },
 
 

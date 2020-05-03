@@ -41,6 +41,11 @@ export class SidebarComponent implements OnInit {
             route: '/home'
         },
         {
+          title: 'Force Users',
+          icon: 'fire',
+          route: '/force-users'
+        },
+        {
             title: 'Typography',
             icon: 'format-underlined',
             route: '/typography'
