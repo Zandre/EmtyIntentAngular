@@ -30,6 +30,11 @@ const routes: Routes = [
               children: []
             },
 
+            {
+              path: 'swapi',
+              loadChildren: () => import('./swapi/swapi.module').then(m => m.SwapiModule)
+            },
+
 
             // Typography
             {

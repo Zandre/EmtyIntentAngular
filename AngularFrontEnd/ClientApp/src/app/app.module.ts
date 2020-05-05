@@ -27,6 +27,7 @@ import { UserComponent } from './layout/sidebar/user/user.component';
 import { PageLoaderComponent } from './layout/page-loader/page-loader.component';
 import { NavigationTriggerComponent } from './layout/header/navigation-trigger/navigation-trigger.component';
 import { AuthGuard } from './auth.guard';
+import { SwapiModule } from './swapi/swapi.module';
 
 @NgModule({
    declarations: [
@@ -58,7 +59,7 @@ import { AuthGuard } from './auth.guard';
       timeOut: 5000,
       progressBar: true,
       preventDuplicates: true,
-    }),
+    })
    ],
    providers: [
     AppService,

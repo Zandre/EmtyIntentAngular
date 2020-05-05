@@ -46,6 +46,21 @@ export class SidebarComponent implements OnInit {
           route: '/force-users'
         },
         {
+          title: 'Swapi',
+          icon: 'fire',
+          sub: [
+            {
+                title: 'People',
+                route: '/swapi/people'
+            },
+            {
+                title: 'Starships',
+                route: '/swapi/starships'
+            }
+        ],
+        visibility: 'inactive'
+        },
+        {
             title: 'Typography',
             icon: 'format-underlined',
             route: '/typography'
