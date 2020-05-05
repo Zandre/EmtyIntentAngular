@@ -11,7 +11,7 @@ export class StarshipsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('Starships');
+
   }
 
 }

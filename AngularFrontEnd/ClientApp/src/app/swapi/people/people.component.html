@@ -1,3 +1,30 @@
-<p>
-  people works!
-</p>
+<div class="content__inner">
+  <header class="content__title">
+    <h1>People</h1>
+    <small>as fetched from Swapi</small>
+  </header>
+
+  <div class="card">
+    <div class="card-body">
+      <table datatable class="table table-bordered" [dtOptions]="options">
+        <thead>
+          <tr>
+            <th *ngFor="let column of columns">{{ column.title }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let swapiPerson of this.swapiPeople">
+            <td>{{ swapiPerson.name }}</td>
+            <td>{{ swapiPerson.birthYear }}</td>
+            <td>{{ swapiPerson.gender }}</td>
+            <td>{{ swapiPerson.hairColor }}</td>
+            <td>{{ swapiPerson.height }}</td>
+            <td>{{ swapiPerson.skinColor }}</td>
+            <td>{{ swapiPerson.eyeColor }}</td>
+            <td>{{ swapiPerson.mass }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
