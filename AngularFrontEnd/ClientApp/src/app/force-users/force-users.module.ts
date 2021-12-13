@@ -17,6 +17,7 @@ import { FontAwesomeModule, FaConfig } from '@fortawesome/angular-fontawesome';
 import { routing } from './force-users.routing';
 import { ForceUsersComponent } from './force-users.component';
 import { ForceUserDialogComponent } from './force-user-dialog/force-user-dialog.component';
+import { MatGoogleMapsAutocompleteModule } from '@angular-material-extensions/google-maps-autocomplete';
 
 @NgModule({
   imports: [
@@ -37,7 +38,9 @@ import { ForceUserDialogComponent } from './force-user-dialog/force-user-dialog.
 
     FormsModule,
     ReactiveFormsModule,
-    RxReactiveFormsModule
+    RxReactiveFormsModule,
+
+    MatGoogleMapsAutocompleteModule
   ],
   declarations: [ForceUsersComponent, ForceUserDialogComponent]
 })

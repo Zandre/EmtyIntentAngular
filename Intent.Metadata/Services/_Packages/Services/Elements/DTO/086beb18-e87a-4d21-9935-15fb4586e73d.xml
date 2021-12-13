@@ -6,68 +6,7 @@
   <isMapped>false</isMapped>
   <parentFolderId>f73743c4-94c0-4923-84bb-6f26c61e3113</parentFolderId>
   <literals />
-  <attributes>
-    <attribute id="06cef94d-4fc0-47bc-b0a3-3e9a97f5d8d1" type="DTO-Field">
-      <name>id</name>
-      <typeReference id="61d94eeb-6607-4f84-9607-d3c3422f2b4e">
-        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
-        <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <stereotypes />
-    </attribute>
-    <attribute id="a17e3c2a-f541-4839-8e10-3ff35445e668" type="DTO-Field">
-      <name>side</name>
-      <typeReference id="a89a1201-e851-4eb9-8c07-2454ae359c3b">
-        <typeId>596cf2af-4ad5-4dde-8bc1-7a1c7950c08f</typeId>
-        <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <stereotypes />
-    </attribute>
-    <attribute id="f58fd208-c648-4dd2-bd91-be4c81f02545" type="DTO-Field">
-      <name>speciality</name>
-      <typeReference id="bc998231-af9c-473a-b883-9e66fb633cdb">
-        <typeId>a20ba4ff-bc8a-4407-902a-47bfec9822c5</typeId>
-        <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <stereotypes />
-    </attribute>
-    <attribute id="57ee337c-67c2-4bc9-b38e-c53502b62d78" type="DTO-Field">
-      <name>lightSaberColor</name>
-      <typeReference id="8cf46abc-7ad2-4140-b962-6fba2a81eb7a">
-        <typeId>7c95e153-6498-4127-8c61-75ce35176774</typeId>
-        <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <stereotypes />
-    </attribute>
-    <attribute id="31d0bf5c-6250-4f77-8bf6-574d68735dfb" type="DTO-Field">
-      <name>name</name>
-      <typeReference id="dbd94821-9d91-4036-bd3f-2b3991afddc2">
-        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
-        <isNullable>false</isNullable>
-        <isCollection>false</isCollection>
-        <stereotypes />
-        <genericTypeParameters />
-      </typeReference>
-      <isMapped>false</isMapped>
-      <stereotypes />
-    </attribute>
-  </attributes>
+  <attributes />
   <operations />
   <stereotypes>
     <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
@@ -75,5 +14,101 @@
       <properties />
     </stereotype>
   </stereotypes>
-  <childElements />
+  <childElements>
+    <childElement id="06cef94d-4fc0-47bc-b0a3-3e9a97f5d8d1" type="DTO-Field">
+      <name>id</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="61d94eeb-6607-4f84-9607-d3c3422f2b4e">
+        <typeId>6b649125-18ea-48fd-a6ba-0bfff0d8f488</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="a17e3c2a-f541-4839-8e10-3ff35445e668" type="DTO-Field">
+      <name>side</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="a89a1201-e851-4eb9-8c07-2454ae359c3b">
+        <typeId>596cf2af-4ad5-4dde-8bc1-7a1c7950c08f</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="f58fd208-c648-4dd2-bd91-be4c81f02545" type="DTO-Field">
+      <name>speciality</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="bc998231-af9c-473a-b883-9e66fb633cdb">
+        <typeId>a20ba4ff-bc8a-4407-902a-47bfec9822c5</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="57ee337c-67c2-4bc9-b38e-c53502b62d78" type="DTO-Field">
+      <name>lightSaberColor</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="8cf46abc-7ad2-4140-b962-6fba2a81eb7a">
+        <typeId>7c95e153-6498-4127-8c61-75ce35176774</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes />
+      <childElements />
+    </childElement>
+    <childElement id="31d0bf5c-6250-4f77-8bf6-574d68735dfb" type="DTO-Field">
+      <name>name</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="dbd94821-9d91-4036-bd3f-2b3991afddc2">
+        <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes />
+      <childElements />
+    </childElement>
+  </childElements>
 </class>

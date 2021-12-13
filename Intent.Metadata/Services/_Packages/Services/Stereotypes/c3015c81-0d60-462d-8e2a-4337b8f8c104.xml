@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <stereotypeDefinition id="c3015c81-0d60-462d-8e2a-4337b8f8c104">
   <name>Public</name>
-  <icon type="FontAwesome" source="globe" />
-  <displayIcon>true</displayIcon>
-  <displayFunction>[Public]</displayFunction>
+  <targetMode>of-type</targetMode>
   <targetElements>
     <element>service</element>
     <element>dto</element>
   </targetElements>
+  <applyMode>manually</applyMode>
+  <icon type="FontAwesome" source="globe" />
+  <displayIcon>true</displayIcon>
+  <displayFunction>`[Public]`;</displayFunction>
   <autoAdd>false</autoAdd>
   <parentFolderId>2d42cc4d-6544-4d6b-9394-137c25bd1449</parentFolderId>
+  <order d2p1:nil="true" xmlns:d2p1="http://www.w3.org/2001/XMLSchema-instance" />
   <properties />
 </stereotypeDefinition>

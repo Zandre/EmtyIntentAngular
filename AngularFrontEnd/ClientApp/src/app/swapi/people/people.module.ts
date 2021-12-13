@@ -4,13 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DataTablesModule } from 'angular-datatables';
 
 import { PeopleComponent } from './people.component';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [PeopleComponent],
   imports: [
     CommonModule,
     BrowserModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule,
+    MatFormFieldModule,
   ]
 })
 

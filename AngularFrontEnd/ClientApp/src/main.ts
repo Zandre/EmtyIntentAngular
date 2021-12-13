@@ -30,6 +30,3 @@ if (environment.hmr) {
   bootstrap().catch(err => console.log(err));
 }
 
-
-
-export { renderModule, renderModuleFactory } from '@angular/platform-server';

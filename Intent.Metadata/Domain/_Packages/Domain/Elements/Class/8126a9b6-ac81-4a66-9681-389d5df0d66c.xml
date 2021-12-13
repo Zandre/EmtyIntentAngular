@@ -6,109 +6,173 @@
   <isMapped>false</isMapped>
   <parentFolderId>d64598ef-11b7-4c12-a384-0ddf423c3fc4</parentFolderId>
   <literals />
-  <attributes>
-    <attribute id="5d03ecd0-7da2-463d-ac4c-3c516b529345" type="Attribute">
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements>
+    <childElement id="5d03ecd0-7da2-463d-ac4c-3c516b529345" type="Attribute">
       <name>name</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
       <typeReference id="b1b308ee-f5a2-4951-b6ec-14c93e0d8669">
         <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+        <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes />
-    </attribute>
-    <attribute id="09944d72-d87c-43c5-a805-21c252ce37c7" type="Attribute">
+      <childElements />
+    </childElement>
+    <childElement id="09944d72-d87c-43c5-a805-21c252ce37c7" type="Attribute">
       <name>side</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
       <typeReference id="282b11da-12c0-4f57-ae73-6db0db186c14">
         <typeId>596cf2af-4ad5-4dde-8bc1-7a1c7950c08f</typeId>
+        <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes />
-    </attribute>
-    <attribute id="03386a9c-40ea-4fcd-bf23-d4fbb911861b" type="Attribute">
+      <childElements />
+    </childElement>
+    <childElement id="03386a9c-40ea-4fcd-bf23-d4fbb911861b" type="Attribute">
       <name>speciality</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
       <typeReference id="a7cda272-c9b2-4483-98f1-210889a80d9e">
         <typeId>a20ba4ff-bc8a-4407-902a-47bfec9822c5</typeId>
+        <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes />
-    </attribute>
-    <attribute id="bbbc464d-0de6-4061-b1e2-a9eeae0864b8" type="Attribute">
+      <childElements />
+    </childElement>
+    <childElement id="bbbc464d-0de6-4061-b1e2-a9eeae0864b8" type="Attribute">
       <name>lightSaberColor</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
       <typeReference id="cadbcd31-fef0-4264-a835-a89c2dda1fb8">
         <typeId>7c95e153-6498-4127-8c61-75ce35176774</typeId>
+        <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
         <isCollection>false</isCollection>
         <stereotypes />
         <genericTypeParameters />
       </typeReference>
       <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes />
-    </attribute>
-  </attributes>
-  <operations>
-    <operation id="8c3e82b1-9045-4a2a-bb7e-c95ec21cb7a5" type="Operation" isAbstract="false">
+      <childElements />
+    </childElement>
+    <childElement id="8c3e82b1-9045-4a2a-bb7e-c95ec21cb7a5" type="Operation">
       <name>UpdateDetails</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
       <isMapped>false</isMapped>
-      <parameters>
-        <parameter id="631b7cd5-f4c1-481a-a4e3-38d84163ca08">
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes />
+      <childElements>
+        <childElement id="631b7cd5-f4c1-481a-a4e3-38d84163ca08" type="Parameter">
           <name>name</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
           <typeReference id="7410e0f5-5fa5-449d-bba6-23a1e1e4c789">
             <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
             <isNullable>false</isNullable>
             <isCollection>false</isCollection>
             <stereotypes />
             <genericTypeParameters />
           </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
           <stereotypes />
-        </parameter>
-        <parameter id="bcfca1ed-6c22-4e41-8c10-53a336d9e9eb">
+          <childElements />
+        </childElement>
+        <childElement id="bcfca1ed-6c22-4e41-8c10-53a336d9e9eb" type="Parameter">
           <name>side</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
           <typeReference id="43156793-33dc-4495-af8e-2175949120a3">
             <typeId>596cf2af-4ad5-4dde-8bc1-7a1c7950c08f</typeId>
+            <isNavigable>true</isNavigable>
             <isNullable>false</isNullable>
             <isCollection>false</isCollection>
             <stereotypes />
             <genericTypeParameters />
           </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
           <stereotypes />
-        </parameter>
-        <parameter id="b70f5214-23f4-40ed-b7aa-941f6885dc10">
+          <childElements />
+        </childElement>
+        <childElement id="b70f5214-23f4-40ed-b7aa-941f6885dc10" type="Parameter">
           <name>speciality</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
           <typeReference id="f95e0847-be89-44b2-8120-b8d2294f8b43">
             <typeId>a20ba4ff-bc8a-4407-902a-47bfec9822c5</typeId>
+            <isNavigable>true</isNavigable>
             <isNullable>false</isNullable>
             <isCollection>false</isCollection>
             <stereotypes />
             <genericTypeParameters />
           </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
           <stereotypes />
-        </parameter>
-        <parameter id="6fec2db8-8bcd-40dc-b93f-e561df23c4ed">
+          <childElements />
+        </childElement>
+        <childElement id="6fec2db8-8bcd-40dc-b93f-e561df23c4ed" type="Parameter">
           <name>lightSaberColor</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
           <typeReference id="1dca6e68-fb12-4d2e-9f5f-f7879f2d6e71">
             <typeId>7c95e153-6498-4127-8c61-75ce35176774</typeId>
+            <isNavigable>true</isNavigable>
             <isNullable>false</isNullable>
             <isCollection>false</isCollection>
             <stereotypes />
             <genericTypeParameters />
           </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
           <stereotypes />
-        </parameter>
-      </parameters>
-      <stereotypes />
-    </operation>
-  </operations>
-  <stereotypes />
-  <childElements />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
 </class>

@@ -6,6 +6,8 @@ import { SwapiService } from '../swapi-service/swapi.service';
 import { SwapiPerson } from './models/swapi-person.model';
 
 
+
+
 @Component({
   // tslint:disable-next-line: component-selector
   selector: 'swapi-people',

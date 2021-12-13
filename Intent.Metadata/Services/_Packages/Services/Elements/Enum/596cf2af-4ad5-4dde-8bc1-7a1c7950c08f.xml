@@ -5,10 +5,20 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>fff80a12-ddce-4b0e-a852-0f824ffeb85b</parentFolderId>
-  <literals>
-    <literal id="c0899c80-e29b-4161-9fc4-1ec41c1f0632" type="Enum-Literal">
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements>
+    <childElement id="c0899c80-e29b-4161-9fc4-1ec41c1f0632" type="Enum-Literal">
       <name>Light</name>
+      <isAbstract>false</isAbstract>
       <value>1</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -20,10 +30,17 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-    <literal id="09aec7d0-e0f4-428f-87f8-43432a8b35c6" type="Enum-Literal">
+      <childElements />
+    </childElement>
+    <childElement id="09aec7d0-e0f4-428f-87f8-43432a8b35c6" type="Enum-Literal">
       <name>Dark</name>
+      <isAbstract>false</isAbstract>
       <value>2</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -35,10 +52,7 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-  </literals>
-  <attributes />
-  <operations />
-  <stereotypes />
-  <childElements />
+      <childElements />
+    </childElement>
+  </childElements>
 </class>

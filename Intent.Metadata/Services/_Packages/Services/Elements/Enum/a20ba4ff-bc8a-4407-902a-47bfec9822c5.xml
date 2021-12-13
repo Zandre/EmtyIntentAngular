@@ -5,10 +5,20 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>fff80a12-ddce-4b0e-a852-0f824ffeb85b</parentFolderId>
-  <literals>
-    <literal id="c075f185-11cb-4ab3-b4c9-146e8f556788" type="Enum-Literal">
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements>
+    <childElement id="c075f185-11cb-4ab3-b4c9-146e8f556788" type="Enum-Literal">
       <name>LightSaber</name>
+      <isAbstract>false</isAbstract>
       <value>1</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -20,10 +30,17 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-    <literal id="1605ef3a-fc15-4a6d-813b-3141490ad774" type="Enum-Literal">
+      <childElements />
+    </childElement>
+    <childElement id="1605ef3a-fc15-4a6d-813b-3141490ad774" type="Enum-Literal">
       <name>ForceLightning</name>
+      <isAbstract>false</isAbstract>
       <value>2</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -35,10 +52,17 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-    <literal id="d4e97f82-d05d-4454-b99c-1ef7ab6df7ad" type="Enum-Literal">
+      <childElements />
+    </childElement>
+    <childElement id="d4e97f82-d05d-4454-b99c-1ef7ab6df7ad" type="Enum-Literal">
       <name>Prophesy</name>
+      <isAbstract>false</isAbstract>
       <value>3</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -50,10 +74,7 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-  </literals>
-  <attributes />
-  <operations />
-  <stereotypes />
-  <childElements />
+      <childElements />
+    </childElement>
+  </childElements>
 </class>

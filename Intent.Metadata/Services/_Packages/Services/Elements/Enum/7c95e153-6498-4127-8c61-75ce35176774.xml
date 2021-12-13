@@ -5,10 +5,20 @@
   <genericTypes />
   <isMapped>false</isMapped>
   <parentFolderId>fff80a12-ddce-4b0e-a852-0f824ffeb85b</parentFolderId>
-  <literals>
-    <literal id="d33c5f04-5041-4893-862b-c10b452172e6" type="Enum-Literal">
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes />
+  <childElements>
+    <childElement id="d33c5f04-5041-4893-862b-c10b452172e6" type="Enum-Literal">
       <name>Green</name>
+      <isAbstract>false</isAbstract>
       <value>1</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -20,10 +30,17 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-    <literal id="b0100aab-a158-4696-adec-9492afecb590" type="Enum-Literal">
+      <childElements />
+    </childElement>
+    <childElement id="b0100aab-a158-4696-adec-9492afecb590" type="Enum-Literal">
       <name>Blue</name>
+      <isAbstract>false</isAbstract>
       <value>2</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -35,10 +52,17 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-    <literal id="3f7e6e68-1400-4b27-afc8-c354a450b1ef" type="Enum-Literal">
+      <childElements />
+    </childElement>
+    <childElement id="3f7e6e68-1400-4b27-afc8-c354a450b1ef" type="Enum-Literal">
       <name>Red</name>
+      <isAbstract>false</isAbstract>
       <value>3</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -50,10 +74,17 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-    <literal id="943dac47-f581-4986-932f-0a5b7e2aec54" type="Enum-Literal">
+      <childElements />
+    </childElement>
+    <childElement id="943dac47-f581-4986-932f-0a5b7e2aec54" type="Enum-Literal">
       <name>Purple</name>
+      <isAbstract>false</isAbstract>
       <value>4</value>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="3f59365f-66cb-4b3a-8064-fc73b92425c0">
           <addedByDefault>false</addedByDefault>
@@ -65,10 +96,7 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </literal>
-  </literals>
-  <attributes />
-  <operations />
-  <stereotypes />
-  <childElements />
+      <childElements />
+    </childElement>
+  </childElements>
 </class>

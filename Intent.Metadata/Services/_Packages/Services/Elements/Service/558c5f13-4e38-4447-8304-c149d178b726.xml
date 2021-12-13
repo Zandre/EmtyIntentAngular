@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class id="558c5f13-4e38-4447-8304-c149d178b726" type="Service">
+  <name>Accounts</name>
+  <isAbstract>false</isAbstract>
+  <genericTypes />
+  <isMapped>false</isMapped>
+  <parentFolderId>e13e7418-b36e-452f-a6cf-ee2ae71b4097</parentFolderId>
+  <literals />
+  <attributes />
+  <operations />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="592B2300-6406-47EC-B7FC-358F87F6E4A4">
+      <addedByDefault>false</addedByDefault>
+      <properties>
+        <property name="01FDB27C-50B3-4C04-AC0E-69D211119910" value="api/[controller]" isActive="true" />
+      </properties>
+    </stereotype>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
+  </stereotypes>
+  <childElements>
+    <childElement id="4af01fc0-3359-4af8-843e-95c820456759" type="Operation">
+      <name>CreateAccount</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">
+          <addedByDefault>false</addedByDefault>
+          <properties />
+        </stereotype>
+        <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
+          <addedByDefault>false</addedByDefault>
+          <properties>
+            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="GET" isActive="true" />
+            <property name="13F033F5-9BC4-47C0-A2DE-92A10E039A23" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <childElements>
+        <childElement id="906650b3-fbf9-444f-b4c3-4dbb939ba4e0" type="Parameter">
+          <name>firstName</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="a5d83a8b-04dd-483d-a232-182edd6ed4d1">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
+          <stereotypes />
+          <childElements />
+        </childElement>
+        <childElement id="50aaf80e-39d6-4493-bf99-ad390345ea9a" type="Parameter">
+          <name>lastName</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="be1c13b0-fa6b-45a6-b71d-540ea8a74c11">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
+          <stereotypes />
+          <childElements />
+        </childElement>
+        <childElement id="54390034-036c-46ed-9203-2fad552bca8e" type="Parameter">
+          <name>email</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="27d1f744-5f1a-43c0-9537-aad5bb9bb178">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
+          <stereotypes />
+          <childElements />
+        </childElement>
+        <childElement id="a835d3d6-057c-4d4a-a89b-07a292405645" type="Parameter">
+          <name>password</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="c931f263-3b12-4ec9-b83e-a112c7c89185">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
+          <stereotypes />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+    <childElement id="a7a0ac8a-4c95-44db-89dd-44821b36c4d4" type="Operation">
+      <name>Login</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="ec09f171-60bc-4d1d-8833-908d5e307828">
+        <typeId>12ebdcc8-0ab7-4ba4-966e-f912b33e4ab7</typeId>
+        <isNavigable>true</isNavigable>
+        <isNullable>false</isNullable>
+        <isCollection>false</isCollection>
+        <stereotypes />
+        <genericTypeParameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
+      <stereotypes>
+        <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">
+          <addedByDefault>false</addedByDefault>
+          <properties />
+        </stereotype>
+        <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
+          <addedByDefault>false</addedByDefault>
+          <properties>
+            <property name="21C01082-802F-4099-BBCB-DFE56639B022" value="GET" isActive="true" />
+            <property name="13F033F5-9BC4-47C0-A2DE-92A10E039A23" isActive="true" />
+          </properties>
+        </stereotype>
+      </stereotypes>
+      <childElements>
+        <childElement id="2082ce4f-cd5e-4979-a1de-bb02ad1cdd46" type="Parameter">
+          <name>userName</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="ad07a3f5-477d-4be1-bc18-2762203b600d">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
+          <stereotypes />
+          <childElements />
+        </childElement>
+        <childElement id="ff1da69a-b9c6-4c87-a1ee-4811c7098cfe" type="Parameter">
+          <name>password</name>
+          <isAbstract>false</isAbstract>
+          <genericTypes />
+          <typeReference id="ec68834a-c193-4567-8600-933dc00d89fa">
+            <typeId>d384db9c-a279-45e1-801e-e4e8099625f2</typeId>
+            <isNavigable>true</isNavigable>
+            <isNullable>false</isNullable>
+            <isCollection>false</isCollection>
+            <stereotypes />
+            <genericTypeParameters />
+          </typeReference>
+          <isMapped>false</isMapped>
+          <literals />
+          <attributes />
+          <operations />
+          <stereotypes />
+          <childElements />
+        </childElement>
+      </childElements>
+    </childElement>
+  </childElements>
+</class>

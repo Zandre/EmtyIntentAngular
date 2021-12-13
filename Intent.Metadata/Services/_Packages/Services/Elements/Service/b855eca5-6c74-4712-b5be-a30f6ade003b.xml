@@ -7,18 +7,36 @@
   <parentFolderId>e13e7418-b36e-452f-a6cf-ee2ae71b4097</parentFolderId>
   <literals />
   <attributes />
-  <operations>
-    <operation id="d7f3c1e8-a91b-4027-bf7e-816ab97ccc76" type="Operation" isAbstract="false">
+  <operations />
+  <stereotypes>
+    <stereotype stereotypeDefinitionId="592B2300-6406-47EC-B7FC-358F87F6E4A4">
+      <addedByDefault>false</addedByDefault>
+      <properties>
+        <property name="01FDB27C-50B3-4C04-AC0E-69D211119910" value="api/[controller]" isActive="true" />
+      </properties>
+    </stereotype>
+    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
+      <addedByDefault>false</addedByDefault>
+      <properties />
+    </stereotype>
+  </stereotypes>
+  <childElements>
+    <childElement id="d7f3c1e8-a91b-4027-bf7e-816ab97ccc76" type="Operation">
       <name>GetForceUsers</name>
-      <isMapped>false</isMapped>
-      <returnType id="2d5ce9ef-fa1c-408b-b040-65418924d2ac">
+      <isAbstract>false</isAbstract>
+      <genericTypes />
+      <typeReference id="2d5ce9ef-fa1c-408b-b040-65418924d2ac">
         <typeId>086beb18-e87a-4d21-9935-15fb4586e73d</typeId>
+        <isNavigable>true</isNavigable>
         <isNullable>false</isNullable>
         <isCollection>true</isCollection>
         <stereotypes />
         <genericTypeParameters />
-      </returnType>
-      <parameters />
+      </typeReference>
+      <isMapped>false</isMapped>
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="A225C795-33E9-417D-8D58-E22826A08224">
           <addedByDefault>false</addedByDefault>
@@ -32,11 +50,16 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </operation>
-    <operation id="4af48d4c-cded-4c49-90f5-92acd03e3513" type="Operation" isAbstract="false">
+      <childElements />
+    </childElement>
+    <childElement id="4af48d4c-cded-4c49-90f5-92acd03e3513" type="Operation">
       <name>CauseCSharpError</name>
+      <isAbstract>false</isAbstract>
+      <genericTypes />
       <isMapped>false</isMapped>
-      <parameters />
+      <literals />
+      <attributes />
+      <operations />
       <stereotypes>
         <stereotype stereotypeDefinitionId="049EB4F0-C89B-43B3-A082-AA7511858354">
           <addedByDefault>false</addedByDefault>
@@ -46,19 +69,7 @@
           </properties>
         </stereotype>
       </stereotypes>
-    </operation>
-  </operations>
-  <stereotypes>
-    <stereotype stereotypeDefinitionId="592B2300-6406-47EC-B7FC-358F87F6E4A4">
-      <addedByDefault>false</addedByDefault>
-      <properties>
-        <property name="01FDB27C-50B3-4C04-AC0E-69D211119910" value="api/[controller]" isActive="true" />
-      </properties>
-    </stereotype>
-    <stereotype stereotypeDefinitionId="c3015c81-0d60-462d-8e2a-4337b8f8c104">
-      <addedByDefault>false</addedByDefault>
-      <properties />
-    </stereotype>
-  </stereotypes>
-  <childElements />
+      <childElements />
+    </childElement>
+  </childElements>
 </class>
